@@ -44,6 +44,7 @@ pwd
 ```bash
 /home/ubuntu
 ```
+<img width="533" height="76" alt="image" src="https://github.com/user-attachments/assets/608119c2-1e3c-4d66-bdbe-c1e96fe75fe9" />
 
 ## Why It Matters
 
@@ -76,6 +77,8 @@ ls -la
 ## Why It Matters
 
 Used daily to inspect directories and file permissions.
+<img width="847" height="407" alt="image" src="https://github.com/user-attachments/assets/bbf3a7ec-fddd-447b-b61f-7b1bfbc1b7d7" />
+
 
 ---
 
@@ -118,6 +121,9 @@ mkdir project
 ```bash
 mkdir -p app/logs/archive
 ```
+<img width="788" height="54" alt="image" src="https://github.com/user-attachments/assets/035fdb68-6ff4-4fd4-931a-1018d551eded" />
+<img width="580" height="153" alt="image" src="https://github.com/user-attachments/assets/0b3e2b32-a209-42e2-a872-6a983b34cd4c" />
+
 
 ---
 
@@ -130,6 +136,7 @@ Creates files quickly.
 ```bash
 touch app.log
 ```
+<img width="659" height="155" alt="image" src="https://github.com/user-attachments/assets/7291c2a5-4c36-47b3-b196-102f3676affe" />
 
 ---
 
@@ -148,6 +155,7 @@ cp file1.txt backup.txt
 ```bash
 cp -r project backup-project
 ```
+<img width="960" height="298" alt="image" src="https://github.com/user-attachments/assets/ed287a0a-c089-43ac-8c04-551ef61e5966" />
 
 ---
 
@@ -160,6 +168,7 @@ Moves or renames files.
 ```bash
 mv old.txt new.txt
 ```
+<img width="714" height="268" alt="image" src="https://github.com/user-attachments/assets/594e4553-428c-4b77-8008-3c8b95dd1df2" />
 
 ## Move File
 
@@ -178,6 +187,7 @@ Deletes files/directories.
 ```bash
 rm file.txt
 ```
+<img width="706" height="131" alt="image" src="https://github.com/user-attachments/assets/bb145513-9489-42df-a3a8-bf10f72a6849" />
 
 ## Delete Directory
 
