@@ -66,7 +66,7 @@ Example Output:
 ```bash
 6.8.0-1018-aws
 ```
-
+![alt text](image.png)
 ---
 
 # 2. User Space
