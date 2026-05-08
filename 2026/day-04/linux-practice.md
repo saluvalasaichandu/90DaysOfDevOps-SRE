@@ -84,6 +84,7 @@ Finds PID of a specific application.
 ```bash
 systemctl status docker
 ```
+<img width="1366" height="422" alt="image" src="https://github.com/user-attachments/assets/c31886d9-be78-4c5e-9c97-b50e09c430f4" />
 
 ### Purpose
 
@@ -188,6 +189,7 @@ systemctl status docker
 ```bash
 ps -ef | grep docker
 ```
+<img width="1366" height="153" alt="image" src="https://github.com/user-attachments/assets/5ebd1fc9-ffca-48fc-b595-26db9d339d29" />
 
 ---
 
