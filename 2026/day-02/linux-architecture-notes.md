@@ -188,6 +188,7 @@ Zombie processes consume PID entries.
 ```bash
 ps -ef
 ```
+<img width="1366" height="267" alt="image" src="https://github.com/user-attachments/assets/6f4339e5-9944-4eee-97b2-850d4b94c472" />
 
 ---
 
@@ -196,6 +197,7 @@ ps -ef
 ```bash
 top
 ```
+<img width="1366" height="435" alt="image" src="https://github.com/user-attachments/assets/32610bc0-4d3c-4090-bf0f-6853515d3543" />
 
 or
 
@@ -210,6 +212,7 @@ htop
 ```bash
 free -h
 ```
+<img width="1366" height="128" alt="image" src="https://github.com/user-attachments/assets/6b0b7697-1117-436d-bcfd-67ef07ab692a" />
 
 ---
 
@@ -218,6 +221,7 @@ free -h
 ```bash
 df -h
 ```
+<img width="807" height="325" alt="image" src="https://github.com/user-attachments/assets/efc01d29-6e1d-4475-b0d1-bf1968bd9afe" />
 
 ---
 
@@ -226,6 +230,7 @@ df -h
 ```bash
 pstree
 ```
+<img width="1040" height="558" alt="image" src="https://github.com/user-attachments/assets/97a0da97-a96c-4986-80a1-857b503802ff" />
 
 ---
 
@@ -276,6 +281,7 @@ systemctl enable nginx
 ```bash
 journalctl -xe
 ```
+<img width="1366" height="657" alt="image" src="https://github.com/user-attachments/assets/e370ae8e-05e8-4535-b61b-41d056362fbc" />
 
 ---
 
