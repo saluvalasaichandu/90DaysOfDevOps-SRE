@@ -1,58 +1,38 @@
-````markdown id="8n6jrp"
 # 🚀 Day 04 – Linux Practice: Processes and Services
 
-# 📌 Introduction
+## 📌 Introduction
 
-Linux process and service management are among the most important skills for DevOps and SRE Engineers.
+Linux process and service management are core skills for DevOps and SRE Engineers.
 
-In real-world production environments, most troubleshooting starts with:
-- Checking running processes
-- Verifying service health
-- Analyzing logs
-- Monitoring CPU and memory usage
+Most production troubleshooting starts with:
 
-Today’s hands-on practice focused on:
-✅ Process Monitoring  
-✅ Service Management with systemd  
-✅ Log Analysis  
-✅ Basic Troubleshooting Workflow  
+* Checking processes
+* Verifying services
+* Monitoring logs
+* Analyzing CPU and memory usage
 
----
+In this hands-on practice, I worked on:
 
-# ⚙️ What is a Process in Linux?
-
-A process is a running instance of a program.
-
-Examples:
-- nginx
-- docker
-- sshd
-- kubelet
-
-Each process has:
-- PID (Process ID)
-- Parent PID
-- CPU usage
-- Memory usage
-- Process state
+* Process Monitoring
+* Service Management with systemd
+* Log Analysis
+* Basic Troubleshooting Workflow
 
 ---
 
-# 🔍 Process Monitoring Commands
+# ⚙️ Process Management Practice
 
-# 1️⃣ View Running Processes
-
-## Command
+## 🔹 View Running Processes
 
 ```bash
 ps -ef
 ```
 
-## Purpose
+### Purpose
 
-Displays all currently running processes.
+Displays all running processes in the system.
 
-## Example Output
+### Example Output
 
 ```bash
 root       1       0  0 08:00 ?        00:00:02 systemd
@@ -60,18 +40,9 @@ root     632       1  0 08:01 ?        00:00:01 sshd
 ubuntu   1421    1400 0 08:10 pts/0    00:00:00 bash
 ```
 
-## Why It Matters
-
-Used to:
-- Find running applications
-- Check process IDs
-- Troubleshoot services
-
 ---
 
-# 2️⃣ Real-Time Process Monitoring
-
-## Command
+## 🔹 Real-Time Monitoring
 
 ```bash
 top
@@ -83,82 +54,46 @@ or
 htop
 ```
 
-## Purpose
+### Purpose
 
-Displays:
-- CPU usage
-- Memory usage
-- Running processes
-- System load
+Used to monitor:
 
-## Why It Matters
-
-Helps identify:
-- High CPU usage
-- Memory leaks
-- Stuck processes
+* CPU usage
+* Memory usage
+* Running processes
+* System load
 
 ---
 
-# 3️⃣ Find Specific Process
-
-## Command
+## 🔹 Find Specific Process
 
 ```bash
 pgrep nginx
 ```
 
-## Purpose
+### Purpose
 
-Finds process IDs of specific applications.
-
----
-
-# ⚙️ What is a Service in Linux?
-
-A service is a long-running background application managed by `systemd`.
-
-Examples:
-- nginx
-- docker
-- sshd
-- cron
-
-Services automatically start during boot and continue running in the background.
+Finds PID of a specific application.
 
 ---
 
-# 🔧 Service Management with systemd
+# ⚙️ Service Management Practice
 
-Linux uses `systemd` as the init system and service manager.
-
-It helps:
-- Start services
-- Stop services
-- Restart services
-- Monitor service health
-- Manage logs
-
----
-
-# 🛠️ Service Commands Practice
-
-# 1️⃣ Check Service Status
-
-## Command
+## 🔹 Check Service Status
 
 ```bash
 systemctl status docker
 ```
 
-## Purpose
+### Purpose
 
 Checks whether Docker service is:
-- Running
-- Failed
-- Restarting
 
-## Example Output
+* Running
+* Failed
+* Restarting
+
+### Example Output
 
 ```bash
 Active: active (running)
@@ -166,94 +101,81 @@ Active: active (running)
 
 ---
 
-# 2️⃣ List Running Services
-
-## Command
+## 🔹 List Running Services
 
 ```bash
 systemctl list-units --type=service
 ```
 
-## Purpose
+### Purpose
 
-Displays active services running on the server.
+Displays active services running in the system.
 
 ---
 
-# 3️⃣ Restart Service
-
-## Command
+## 🔹 Restart Service
 
 ```bash
 systemctl restart docker
 ```
 
-## Purpose
+### Purpose
 
-Restarts service after configuration changes or failures.
-
----
-
-# 📜 Log Management Commands
-
-Logs are extremely important during production troubleshooting.
+Restarts Docker service.
 
 ---
 
-# 1️⃣ View Service Logs
+# 📜 Log Analysis Practice
 
-## Command
+## 🔹 View Service Logs
 
 ```bash
 journalctl -u docker
 ```
 
-## Purpose
+### Purpose
 
 Displays logs related to Docker service.
 
 ---
 
-# 2️⃣ View Recent Logs
-
-## Command
+## 🔹 View Last 50 Log Lines
 
 ```bash
 tail -n 50 /var/log/syslog
 ```
 
-## Purpose
+### Purpose
 
-Displays latest 50 log lines.
+Displays latest log entries.
 
 ---
 
-# 3️⃣ Monitor Logs in Real Time
-
-## Command
+## 🔹 Monitor Logs in Real Time
 
 ```bash
 tail -f /var/log/syslog
 ```
 
-## Purpose
+### Purpose
 
-Useful during:
-- Deployments
-- Service restarts
-- Troubleshooting
+Used during:
+
+* Deployments
+* Service restarts
+* Troubleshooting
 
 ---
 
 # 🚨 Mini Troubleshooting Scenario
 
-# Scenario
+## Scenario
 
 Docker service is not working properly.
 
 ---
 
-# Step 1 – Check Docker Service Status
+## Step 1 – Check Docker Service Status
 
 ```bash
 systemctl status docker
@@ -261,7 +183,7 @@ systemctl status docker
 
 ---
 
-# Step 2 – Verify Docker Process
+## Step 2 – Verify Docker Process
 
 ```bash
 ps -ef | grep docker
@@ -269,7 +191,7 @@ ps -ef | grep docker
 
 ---
 
-# Step 3 – Check Docker Logs
+## Step 3 – Check Docker Logs
 
 ```bash
 journalctl -u docker
@@ -277,7 +199,7 @@ journalctl -u docker
 
 ---
 
-# Step 4 – Monitor CPU and Memory
+## Step 4 – Monitor CPU and Memory
 
 ```bash
 top
@@ -286,7 +208,7 @@ free -h
 
 ---
 
-# Step 5 – Restart Docker Service
+## Step 5 – Restart Docker Service
 
 ```bash
 systemctl restart docker
@@ -296,30 +218,32 @@ systemctl restart docker
 
 # 🔍 Difference Between Process and Service
 
-| Process | Service |
-|---|---|
-| Running instance of program | Background application |
-| Managed by kernel | Managed by systemd |
-| Has PID | Runs continuously |
-| Example: nginx worker | Example: nginx service |
+| Process                       | Service                             |
+| ----------------------------- | ----------------------------------- |
+| Running instance of program   | Long-running background application |
+| Managed by Kernel             | Managed by systemd                  |
+| Has PID                       | Runs continuously                   |
+| Example: nginx worker process | Example: nginx service              |
 
 ---
 
 # 🎯 Why This Matters for DevOps
 
 Linux process and service troubleshooting skills help DevOps Engineers:
-- Resolve production incidents faster
-- Debug failed applications
-- Analyze logs quickly
-- Reduce downtime
-- Monitor infrastructure efficiently
 
-Most real-world infrastructure issues involve:
-- Failed services
-- High CPU usage
-- Memory problems
-- Crashed processes
-- Log analysis
+* Resolve production incidents faster
+* Debug failed applications
+* Analyze logs quickly
+* Reduce downtime
+* Monitor infrastructure efficiently
+
+Most production issues involve:
+
+* Failed services
+* High CPU usage
+* Memory problems
+* Crashed processes
+* Log analysis
 
 ---
 
@@ -345,7 +269,7 @@ free -h
 
 Linux process and service management are foundational skills for every DevOps and SRE Engineer.
 
-The more comfortable you become with Linux troubleshooting commands, logs, and services, the faster and more confidently you can handle production incidents.
+The better your Linux troubleshooting skills become, the faster and more confidently you can handle real-world production incidents.
 
 #90DaysOfDevOps
 #DevOpsKaJosh
@@ -354,4 +278,3 @@ The more comfortable you become with Linux troubleshooting commands, logs, and s
 #DevOps
 #SRE
 #CloudComputing
-````
