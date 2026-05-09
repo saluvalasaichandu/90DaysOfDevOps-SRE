@@ -49,6 +49,7 @@ Docker is one of the most commonly used services in DevOps environments and is c
 ```bash
 uname -a
 ```
+<img width="1366" height="148" alt="image" src="https://github.com/user-attachments/assets/e5f3bbea-8da6-4da4-9a1b-f7d92ab0ded7" />
 
 ### Purpose
 
@@ -75,6 +76,7 @@ System is running Ubuntu Linux on AWS EC2 instance.
 ```bash
 cat /etc/os-release
 ```
+<img width="887" height="473" alt="image" src="https://github.com/user-attachments/assets/581aaa54-7460-41b8-acc7-4e0727edbed3" />
 
 ### Purpose
 
@@ -183,6 +185,7 @@ No swap pressure detected.
 ```bash
 ps -o pid,pcpu,pmem,comm -p $(pgrep docker)
 ```
+<img width="953" height="130" alt="image" src="https://github.com/user-attachments/assets/3271dd40-1f21-400d-bd17-721cc5efe464" />
 
 ### Purpose
 
@@ -226,6 +229,7 @@ Sufficient free storage available.
 ```bash
 du -sh /var/log
 ```
+<img width="864" height="395" alt="image" src="https://github.com/user-attachments/assets/e3fad358-a6b1-497b-bebf-4e5fa9a1035a" />
 
 ### Purpose
 
@@ -244,6 +248,7 @@ No abnormal log growth observed.
 ```bash
 vmstat
 ```
+<img width="1087" height="164" alt="image" src="https://github.com/user-attachments/assets/fce9f73b-d795-4061-a9b6-9092e5bd2792" />
 
 ### Purpose
 
@@ -273,6 +278,7 @@ Network checks are essential during service outages.
 ```bash
 ss -tulpn
 ```
+<img width="1366" height="264" alt="image" src="https://github.com/user-attachments/assets/cf4b5180-bdeb-4add-b73f-28072740aa80" />
 
 ### Purpose
 
@@ -335,6 +341,7 @@ Logs provide the most important troubleshooting information.
 ```bash
 journalctl -u docker -n 50
 ```
+<img width="1366" height="318" alt="image" src="https://github.com/user-attachments/assets/81bcdf01-c6f4-4ea6-b6c8-a571dabadae4" />
 
 ### Purpose
 
