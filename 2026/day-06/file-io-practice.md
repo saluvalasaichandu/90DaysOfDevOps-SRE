@@ -55,6 +55,7 @@ The `touch` command creates an empty file.
 ```bash id="6u6fef"
 touch notes.txt
 ```
+<img width="575" height="145" alt="image" src="https://github.com/user-attachments/assets/036e5446-0d4b-4771-9fb9-6050ec5b41cc" />
 
 ## Purpose
 
@@ -108,6 +109,7 @@ Writes first line into file.
 ```bash id="a5n2gk"
 echo "DevOps Engineers work extensively with Linux." >> notes.txt
 ```
+<img width="1164" height="342" alt="image" src="https://github.com/user-attachments/assets/afa19608-e7c9-481b-a262-84cf63a9a15a" />
 
 ## Purpose
 
@@ -122,6 +124,7 @@ Appends new line without deleting old content.
 ```bash id="9chcah"
 echo "Logs and configuration files are text-based." | tee -a notes.txt
 ```
+<img width="1366" height="221" alt="image" src="https://github.com/user-attachments/assets/2dea0ac6-630d-498a-86c4-17e9b4fd7810" />
 
 ## Purpose
 
@@ -169,6 +172,7 @@ Linux provides commands to read specific sections.
 ```bash id="g02jgb"
 head -n 2 notes.txt
 ```
+<img width="637" height="143" alt="image" src="https://github.com/user-attachments/assets/603e9552-c6d8-4e83-9c9f-cf92af46af34" />
 
 ## Purpose
 
@@ -190,6 +194,7 @@ DevOps Engineers work extensively with Linux.
 ```bash id="50jux9"
 tail -n 2 notes.txt
 ```
+<img width="762" height="147" alt="image" src="https://github.com/user-attachments/assets/58dc8c17-139d-42f3-87fe-352bd31f7be1" />
 
 ## Purpose
 
@@ -220,6 +225,7 @@ echo "Monitoring and logging are critical in production." >> notes.txt
 ```bash id="r11wlu"
 tail -f notes.txt
 ```
+<img width="872" height="196" alt="image" src="https://github.com/user-attachments/assets/19d4cba5-de3b-4585-bf5b-4e0587c33321" />
 
 ## Purpose
 
