@@ -99,6 +99,7 @@ Each user should have:
 ```bash id="swyqdn"
 sudo useradd -m tokyo
 ```
+<img width="684" height="102" alt="image" src="https://github.com/user-attachments/assets/ba5586c0-0b00-4b30-bbde-33ee5285cf65" />
 
 ### Purpose
 
@@ -113,6 +114,9 @@ Creates user with home directory.
 ```bash id="sck5ai"
 sudo passwd tokyo
 ```
+<img width="1366" height="159" alt="image" src="https://github.com/user-attachments/assets/fb374118-322c-4a14-807a-458d7cb6bc24" />
+
+<img width="968" height="86" alt="image" src="https://github.com/user-attachments/assets/be4fb961-6631-4911-9751-ff8a6ee8f942" />
 
 ### Observation
 
@@ -159,6 +163,7 @@ professor:x:1003:1003::/home/professor:/bin/sh
 ```bash id="jlwmzf"
 ls -l /home
 ```
+<img width="963" height="192" alt="image" src="https://github.com/user-attachments/assets/2b4f0fc7-42dd-4c38-8830-a14e4f60d20e" />
 
 ### Observation
 
@@ -191,6 +196,7 @@ Create:
 sudo groupadd developers
 sudo groupadd admins
 ```
+<img width="731" height="87" alt="image" src="https://github.com/user-attachments/assets/e2eb6e2f-0584-43ab-bf4a-978b12f7099c" />
 
 ---
 
@@ -201,6 +207,7 @@ sudo groupadd admins
 ```bash id="jlwmzi"
 cat /etc/group | grep -E 'developers|admins'
 ```
+<img width="1060" height="120" alt="image" src="https://github.com/user-attachments/assets/1713ff87-a947-47b9-a747-849360f1ac93" />
 
 ## Example Output
 
@@ -230,6 +237,7 @@ admins:x:1005:
 ```bash id="jlwmzk"
 sudo usermod -aG developers tokyo
 ```
+<img width="951" height="60" alt="image" src="https://github.com/user-attachments/assets/a94de3c4-3c36-4cd7-868c-d7f6c7fa1586" />
 
 ---
 
@@ -270,6 +278,7 @@ tokyo : tokyo developers
 berlin : berlin developers admins
 professor : professor admins
 ```
+<img width="1079" height="140" alt="image" src="https://github.com/user-attachments/assets/075b19ef-422e-4e55-ad9a-c08efad6cf82" />
 
 ---
 
@@ -294,6 +303,7 @@ Accessible by developers group.
 ```bash id="jlwmzq"
 sudo mkdir -p /opt/dev-project
 ```
+<img width="829" height="55" alt="image" src="https://github.com/user-attachments/assets/cbbd51ac-43f6-458d-8ba5-767a3c3d910a" />
 
 ---
 
@@ -338,6 +348,7 @@ ls -ld /opt/dev-project
 ```text id="jlwmzu"
 drwxrwxr-x 2 root developers 4096
 ```
+<img width="1008" height="97" alt="image" src="https://github.com/user-attachments/assets/5529fdbe-eedf-4d9e-a369-88a8faaee85f" />
 
 ---
 
@@ -368,6 +379,7 @@ sudo -u berlin touch /opt/dev-project/berlin-file.txt
 ```bash id="jlwmzx"
 ls -l /opt/dev-project
 ```
+<img width="1132" height="149" alt="image" src="https://github.com/user-attachments/assets/22bbea34-36a8-499b-978d-fe9304039867" />
 
 ---
 
@@ -459,6 +471,7 @@ sudo -u nairobi touch /opt/team-workspace/nairobi.txt
 ls -ld /opt/team-workspace
 ls -l /opt/team-workspace
 ```
+<img width="1187" height="417" alt="image" src="https://github.com/user-attachments/assets/0a43b564-76d4-4d27-813f-50d79efa5cb6" />
 
 ---
 
