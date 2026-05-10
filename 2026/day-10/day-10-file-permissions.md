@@ -108,6 +108,7 @@ Examples:
 ```bash id="6h4eqw"
 touch devops.txt
 ```
+<img width="782" height="141" alt="image" src="https://github.com/user-attachments/assets/cdb72893-cc6f-40e6-821c-244831ad5065" />
 
 ### Purpose
 
@@ -220,6 +221,7 @@ Opens file in read-only mode.
 ```bash id="jlwmzw"
 head -n 5 /etc/passwd
 ```
+<img width="773" height="197" alt="image" src="https://github.com/user-attachments/assets/fc5be6b6-45a4-4eea-bcbf-9da01df9ab47" />
 
 ### Purpose
 
@@ -328,10 +330,12 @@ Hello DevOps
 ```bash id="jlym018"
 chmod a-w devops.txt
 ```
+<img width="825" height="163" alt="image" src="https://github.com/user-attachments/assets/3281050f-a6ef-49c2-95d0-adbbba05c85a" />
 
 ### Purpose
 
 Removes write permission for everyone.
+<img width="775" height="119" alt="image" src="https://github.com/user-attachments/assets/44d269f6-4005-42d2-ad9b-7c1dd035dcd7" />
 
 ---
 
