@@ -159,6 +159,7 @@ losetup -a
 ```bash id="jlym181"
 lsblk
 ```
+<img width="754" height="216" alt="image" src="https://github.com/user-attachments/assets/369880bf-4f47-4981-95c3-c1603aea2b87" />
 
 ### Purpose
 
@@ -219,6 +220,7 @@ Displays Logical Volumes.
 ```bash id="jlym185"
 df -h
 ```
+<img width="797" height="291" alt="image" src="https://github.com/user-attachments/assets/8fc6fa5a-89fa-4151-b998-2ad4a942aec1" />
 
 ### Purpose
 
@@ -256,6 +258,7 @@ or
 ```bash id="jlym187"
 pvcreate /dev/sdb
 ```
+<img width="862" height="369" alt="image" src="https://github.com/user-attachments/assets/c60a939f-2d71-45e3-b7a2-6ea66da86429" />
 
 ---
 
@@ -301,6 +304,7 @@ vgcreate devops-vg /dev/loop0
 ```bash id="jlym191"
 vgs
 ```
+<img width="831" height="175" alt="image" src="https://github.com/user-attachments/assets/f937f9a8-8484-4883-8c96-efa05f32d7b3" />
 
 ## Example Output
 
@@ -346,6 +350,7 @@ lvcreate -L 500M -n app-data devops-vg
 ```bash id="jlym194"
 lvs
 ```
+<img width="1351" height="162" alt="image" src="https://github.com/user-attachments/assets/656e3939-9b9b-4a59-a0bd-35ff85c87eb3" />
 
 ## Example Output
 
@@ -378,6 +383,7 @@ Common filesystems:
 ```bash id="jlym196"
 mkfs.ext4 /dev/devops-vg/app-data
 ```
+<img width="1060" height="334" alt="image" src="https://github.com/user-attachments/assets/7bf51617-730e-4690-9237-d5fd366a6636" />
 
 ---
 
@@ -408,6 +414,7 @@ mount /dev/devops-vg/app-data /mnt/app-data
 ```bash id="jlym199"
 df -h /mnt/app-data
 ```
+<img width="1272" height="382" alt="image" src="https://github.com/user-attachments/assets/72018d40-3b76-4f89-a62d-73c65ad85a3c" />
 
 ## Example Output
 
