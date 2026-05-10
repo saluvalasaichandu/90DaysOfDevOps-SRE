@@ -178,6 +178,7 @@ sudo systemctl enable docker
 ```bash
 docker --version
 ```
+<img width="600" height="128" alt="image" src="https://github.com/user-attachments/assets/87a597a1-8315-4ae6-9540-44bb5522d952" />
 
 ## Example Output
 
@@ -194,6 +195,7 @@ Docker version 27.5.1
 ```bash
 sudo systemctl status docker
 ```
+<img width="1366" height="650" alt="image" src="https://github.com/user-attachments/assets/0b105306-2e11-4142-b43c-22fead566de3" />
 
 ## Observation
 
@@ -242,6 +244,7 @@ sudo systemctl enable nginx
 ```bash
 sudo systemctl status nginx
 ```
+<img width="1366" height="547" alt="image" src="https://github.com/user-attachments/assets/0e1fb7de-6e23-4b1a-8349-3f25a89f7fac" />
 
 ## Observation
 
@@ -284,6 +287,7 @@ http://<PUBLIC-IP>
 ```text
 http://54.210.10.25
 ```
+<img width="1366" height="313" alt="image" src="https://github.com/user-attachments/assets/82f1bb52-8870-4943-a3ce-1fad36a2fa54" />
 
 ## Observation
 
@@ -316,6 +320,7 @@ Logs help engineers:
 ```bash
 cat /var/log/nginx/access.log
 ```
+<img width="1366" height="661" alt="image" src="https://github.com/user-attachments/assets/179996b7-d20e-4be4-b5e5-f69bceda0a5f" />
 
 ## Error Logs
 
