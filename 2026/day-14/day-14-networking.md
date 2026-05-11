@@ -131,6 +131,7 @@ or
 ```bash id="jlym253"
 ip addr show
 ```
+<img width="1365" height="525" alt="image" src="https://github.com/user-attachments/assets/a843038c-26b6-4f0f-8607-c4f0d1e67840" />
 
 ---
 
@@ -169,6 +170,7 @@ ping -c 4 google.com
 ```text id="jlym256"
 4 packets transmitted, 4 received, 0% packet loss
 ```
+<img width="1230" height="341" alt="image" src="https://github.com/user-attachments/assets/8c5b3df9-7dfa-4b0d-a0f2-52947e5a5073" />
 
 ---
 
@@ -203,6 +205,7 @@ or
 ```bash id="jlym258"
 tracepath google.com
 ```
+<img width="1366" height="555" alt="image" src="https://github.com/user-attachments/assets/e0f904a5-b6f3-4c68-817b-e6295725d27d" />
 
 ---
 
@@ -233,6 +236,7 @@ Examples:
 ```bash id="jlym259"
 ss -tulpn
 ```
+<img width="1366" height="582" alt="image" src="https://github.com/user-attachments/assets/f21ecee8-ea56-4b12-ba66-053f32761588" />
 
 ---
 
@@ -265,6 +269,7 @@ Example:
 ```text id="jlym261"
 google.com → 142.250.x.x
 ```
+<img width="999" height="711" alt="image" src="https://github.com/user-attachments/assets/2014974d-1ca9-4612-b7d3-3b9ad4008e78" />
 
 ---
 
@@ -279,6 +284,7 @@ or
 ```bash id="jlym263"
 nslookup google.com
 ```
+<img width="812" height="704" alt="image" src="https://github.com/user-attachments/assets/1fad8010-9d63-4990-8606-7c9a6deac048" />
 
 ---
 
@@ -313,6 +319,7 @@ curl -I https://google.com
 ```text id="jlym265"
 HTTP/2 200
 ```
+<img width="1366" height="461" alt="image" src="https://github.com/user-attachments/assets/e0f2256c-0cce-45a7-8672-67ec7a1c94af" />
 
 ---
 
