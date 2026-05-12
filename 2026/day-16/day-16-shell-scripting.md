@@ -86,6 +86,7 @@ vim hello.sh
 
 echo "Hello, DevOps!"
 ```
+<img width="731" height="283" alt="image" src="https://github.com/user-attachments/assets/07191725-09fe-448a-abbf-07320cb69101" />
 
 ---
 
@@ -106,6 +107,7 @@ chmod +x hello.sh
 ```bash id="jlym303"
 ./hello.sh
 ```
+<img width="725" height="340" alt="image" src="https://github.com/user-attachments/assets/1db49638-8df9-4454-bd23-256f150c0f4e" />
 
 ---
 
@@ -184,6 +186,7 @@ chmod +x variables.sh
 ```bash id="jlym309"
 ./variables.sh
 ```
+<img width="884" height="443" alt="image" src="https://github.com/user-attachments/assets/aa98f67c-4ea6-4f51-a872-eaf8c0ad0497" />
 
 ---
 
@@ -290,6 +293,7 @@ Enter your favourite tool: Kubernetes
 
 Hello Saichandu, your favourite tool is Kubernetes
 ```
+<img width="765" height="628" alt="image" src="https://github.com/user-attachments/assets/7f8d21d0-61c0-4bb8-9d45-e80ea47cfd9b" />
 
 ---
 
@@ -353,6 +357,7 @@ chmod +x check_number.sh
 Enter a number: 10
 Positive Number
 ```
+<img width="750" height="564" alt="image" src="https://github.com/user-attachments/assets/c6b286df-b2e5-4eb1-b68c-b3f530ee6be4" />
 
 ---
 
@@ -400,6 +405,7 @@ chmod +x file_check.sh
 Enter filename: hello.sh
 File exists
 ```
+<img width="1004" height="680" alt="image" src="https://github.com/user-attachments/assets/bea0b9b4-6968-452f-92f9-4a3bc4675d9e" />
 
 ---
 
@@ -454,6 +460,7 @@ fi
 chmod +x server_check.sh
 ./server_check.sh
 ```
+<img width="1366" height="659" alt="image" src="https://github.com/user-attachments/assets/1a7d5087-5ec8-4016-84d0-be126a5a1ab2" />
 
 ---
 
@@ -464,6 +471,8 @@ Do you want to check the status? (y/n): y
 
 nginx is active
 ```
+<img width="839" height="169" alt="image" src="https://github.com/user-attachments/assets/3f37db2d-6d39-49ee-a16b-71821cc851c2" />
+![Uploading image.png…]()
 
 ---
 
