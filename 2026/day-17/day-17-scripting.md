@@ -97,6 +97,7 @@ chmod +x for_loop.sh
 ```bash id="jlym376"
 ./for_loop.sh
 ```
+<img width="713" height="505" alt="image" src="https://github.com/user-attachments/assets/aad22ba5-17a3-45a2-90d8-cb81c45d319c" />
 
 ---
 
@@ -133,6 +134,7 @@ done
 chmod +x count.sh
 ./count.sh
 ```
+<img width="683" height="599" alt="image" src="https://github.com/user-attachments/assets/d66e2397-6db5-4407-9a97-e61ead1249b5" />
 
 ---
 
@@ -202,6 +204,7 @@ echo "Done!"
 chmod +x countdown.sh
 ./countdown.sh
 ```
+<img width="626" height="555" alt="image" src="https://github.com/user-attachments/assets/aaf613ff-f1cf-4673-98e2-e28c3849136d" />
 
 ---
 
@@ -289,6 +292,7 @@ chmod +x greet.sh
 ```text id="jlym388"
 Hello, Saichandu!
 ```
+<img width="825" height="272" alt="image" src="https://github.com/user-attachments/assets/8b51e177-1fa9-4009-a00d-dcba1629c171" />
 
 ---
 
@@ -328,6 +332,7 @@ echo "All Arguments: $@"
 chmod +x args_demo.sh
 ./args_demo.sh DevOps AWS Kubernetes
 ```
+<img width="932" height="430" alt="image" src="https://github.com/user-attachments/assets/203e1c1f-8504-4fb2-8141-46a96718db62" />
 
 ---
 
@@ -404,6 +409,7 @@ done
 chmod +x install_packages.sh
 sudo ./install_packages.sh
 ```
+<img width="774" height="731" alt="image" src="https://github.com/user-attachments/assets/8274bc20-dce0-404f-a1cb-30621ea3ccce" />
 
 ---
 
@@ -415,6 +421,7 @@ curl is already installed
 Installing wget...
 wget installed successfully
 ```
+<img width="1362" height="723" alt="image" src="https://github.com/user-attachments/assets/49eb886d-d5c6-4ffe-92c4-d14c8d9b26f3" />
 
 ---
 
@@ -477,6 +484,7 @@ echo "Script executed successfully"
 chmod +x safe_script.sh
 ./safe_script.sh
 ```
+<img width="1366" height="595" alt="image" src="https://github.com/user-attachments/assets/f2acfb0f-0527-4af6-a42b-37e2e92b1c89" />
 
 ---
 
