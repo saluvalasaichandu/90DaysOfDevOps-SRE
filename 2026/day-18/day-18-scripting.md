@@ -222,6 +222,8 @@ echo $global_var
 
 echo $local_var
 
+<img width="861" height="594" alt="image" src="https://github.com/user-attachments/assets/88325e5b-a8c4-47d5-b688-ffafee649661" />
+
 ### ▶️ Output
 
 Inside Function:
@@ -236,7 +238,7 @@ Global
 - **`local` keyword** restricts a variable to the function scope — it doesn't bleed out
 - Without `local`, any variable set inside a function **modifies the global scope**
 - This is a common source of subtle bugs — always use `local` inside functions unless you explicitly need global mutation
-<img width="861" height="594" alt="image" src="https://github.com/user-attachments/assets/88325e5b-a8c4-47d5-b688-ffafee649661" />
+
 
 ---
 
