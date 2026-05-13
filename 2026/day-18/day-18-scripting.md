@@ -51,7 +51,7 @@ add() {
 }
 
 # --- Main ---
-greet "Shubham"
+greet "Saichandu"
 greet "DevOps Engineer"
 
 add 10 25
@@ -61,11 +61,12 @@ add 100 250
 ### ▶️ Output
 
 ```
-Hello, Shubham!
+Hello, saichandu!
 Hello, DevOps Engineer!
 Sum of 10 and 25 = 35
 Sum of 100 and 250 = 350
 ```
+<img width="901" height="732" alt="image" src="https://github.com/user-attachments/assets/33f6262c-4c55-4cdf-9798-5ed434d32460" />
 
 ### 💡 Explanation
 
@@ -103,6 +104,7 @@ check_memory() {
 check_disk
 check_memory
 ```
+<img width="1243" height="624" alt="image" src="https://github.com/user-attachments/assets/1e64b39f-1f83-465e-a1b0-f58fa88ecfa4" />
 
 ### ▶️ Output
 
@@ -186,6 +188,7 @@ cat /fake | grep "data"        # grep returns 0, hides cat's failure
 # With pipefail:
 cat /fake | grep "data"        # Returns non-zero — cat failed!
 ```
+<img width="946" height="386" alt="image" src="https://github.com/user-attachments/assets/4e9e7c08-ff99-42d0-bb85-fe91b59cfc65" />
 
 > **Best Practice:** Always start scripts with `#!/bin/bash` followed by `set -euo pipefail` for production-grade safety.
 
@@ -199,53 +202,41 @@ cat /fake | grep "data"        # Returns non-zero — cat failed!
 #!/bin/bash
 # local_demo.sh — Demonstrate local vs global variable scope
 
-# ---- Function WITH local variables ----
-function_with_local() {
-    local MY_VAR="I am LOCAL"
-    echo "[Inside function_with_local] MY_VAR = ${MY_VAR}"
+#!/bin/bash
+
+global_var="Global"
+
+demo_function() {
+
+    local local_var="Local"
+
+    echo "Inside Function:"
+    echo $local_var
+    echo $global_var
 }
 
-# ---- Function WITHOUT local variables ----
-function_without_local() {
-    MY_VAR="I am GLOBAL (set inside function)"
-    echo "[Inside function_without_local] MY_VAR = ${MY_VAR}"
-}
+demo_function
 
-# --- Main ---
+echo "Outside Function:"
+echo $global_var
 
-echo "=== Testing LOCAL variable ==="
-MY_VAR="Original Value"
-echo "[Before call] MY_VAR = ${MY_VAR}"
-function_with_local
-echo "[After call]  MY_VAR = ${MY_VAR}"    # Should still be "Original Value"
-
-echo ""
-echo "=== Testing GLOBAL variable (no local) ==="
-MY_VAR="Original Value"
-echo "[Before call] MY_VAR = ${MY_VAR}"
-function_without_local
-echo "[After call]  MY_VAR = ${MY_VAR}"    # Will be changed by the function!
-```
+echo $local_var
 
 ### ▶️ Output
 
-```
-=== Testing LOCAL variable ===
-[Before call] MY_VAR = Original Value
-[Inside function_with_local] MY_VAR = I am LOCAL
-[After call]  MY_VAR = Original Value
+Inside Function:
+Local
+Global
 
-=== Testing GLOBAL variable (no local) ===
-[Before call] MY_VAR = Original Value
-[Inside function_without_local] MY_VAR = I am GLOBAL (set inside function)
-[After call]  MY_VAR = I am GLOBAL (set inside function)
-```
+Outside Function:
+Global
 
 ### 💡 Key Takeaways
 
 - **`local` keyword** restricts a variable to the function scope — it doesn't bleed out
 - Without `local`, any variable set inside a function **modifies the global scope**
 - This is a common source of subtle bugs — always use `local` inside functions unless you explicitly need global mutation
+<img width="861" height="594" alt="image" src="https://github.com/user-attachments/assets/88325e5b-a8c4-47d5-b688-ffafee649661" />
 
 ---
 
@@ -400,6 +391,8 @@ Swap:          2.0Gi          0B       2.0Gi
   ✅ Report Complete
 ════════════════════════════════════════
 ```
+<img width="1273" height="624" alt="image" src="https://github.com/user-attachments/assets/bcf02f42-18ee-45ee-a452-46309b943f45" />
+<img width="613" height="163" alt="image" src="https://github.com/user-attachments/assets/8de9c1ae-734d-4cca-8a8d-6a85e4c86c74" />
 
 ---
 
