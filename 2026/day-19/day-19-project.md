@@ -143,6 +143,7 @@ tar -czf "$DEST/$FILENAME" "$SOURCE"
 du -sh "$DEST/$FILENAME"
 # shows human-readable file size like: 145M
 ```
+<img width="1274" height="232" alt="image" src="https://github.com/user-attachments/assets/1982041e-958c-45c9-a9ad-a5f248e3049f" />
 
 ---
 
