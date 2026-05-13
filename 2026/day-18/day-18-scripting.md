@@ -195,6 +195,7 @@ cat /fake | grep "data"        # Returns non-zero — cat failed!
 ---
 
 ## Task 4: Local Variables
+<img width="911" height="514" alt="image" src="https://github.com/user-attachments/assets/a8ab3034-8d37-48a1-b397-e1a5d2bb0dda" />
 
 ### 📄 Script: `local_demo.sh`
 
@@ -221,8 +222,6 @@ echo "Outside Function:"
 echo $global_var
 
 echo $local_var
-
-<img width="861" height="594" alt="image" src="https://github.com/user-attachments/assets/88325e5b-a8c4-47d5-b688-ffafee649661" />
 
 ### ▶️ Output
 
