@@ -60,6 +60,7 @@ Old .log files compressed.
 Very old .gz files deleted.
 Log rotation done!
 ```
+<img width="816" height="710" alt="image" src="https://github.com/user-attachments/assets/98458400-8cf3-437a-aa95-1dac87fc07a9" />
 
 ### ▶️ If Folder Doesn't Exist
 
