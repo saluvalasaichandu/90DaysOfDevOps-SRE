@@ -129,6 +129,7 @@ Backup created: backup-2026-05-13.tar.gz
 Size: 145M
 Old backups cleaned up.
 ```
+<img width="1037" height="697" alt="image" src="https://github.com/user-attachments/assets/26240a6a-7289-4ebd-8b87-7baa48210c7f" />
 
 ### 💡 What Each Line Does
 
