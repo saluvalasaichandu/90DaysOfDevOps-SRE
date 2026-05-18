@@ -130,6 +130,7 @@ mkdir -p archive
 mv "$LOG_FILE" archive/
 echo "Log moved to: archive/$LOG_FILE"
 ```
+<img width="1366" height="725" alt="image" src="https://github.com/user-attachments/assets/3d7ae3b9-b739-49e9-8f11-e5ca3eee51a1" />
 
 ---
 
@@ -173,6 +174,7 @@ Output looks like:
 ```bash
 grep "ERROR" "$LOG_FILE" | sort | uniq -c | sort -rn | head -5
 ```
+<img width="1366" height="726" alt="image" src="https://github.com/user-attachments/assets/1c6e9585-6962-4e78-94b9-3fac367798dd" />
 
 Read this left to right:
 1. `grep "ERROR"` → get only error lines
@@ -205,6 +207,7 @@ chmod +x sample_logs_generator.sh log_analyzer.sh
 # 4. View the report
 cat log_report_2026-05-13.txt
 ```
+<img width="1364" height="723" alt="image" src="https://github.com/user-attachments/assets/e9c881b7-b327-4446-ad84-0c70138e8c03" />
 
 ---
 
