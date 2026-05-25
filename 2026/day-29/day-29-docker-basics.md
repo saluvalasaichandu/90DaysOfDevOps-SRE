@@ -241,6 +241,7 @@ sudo apt update
 ```bash id="d29a09"
 sudo apt install docker.io -y
 ```
+<img width="1366" height="728" alt="image" src="https://github.com/user-attachments/assets/d189fa37-2397-4aa5-8925-50a6a4ef3612" />
 
 ---
 
@@ -274,6 +275,7 @@ Docker version 24.x.x
 ```bash id="d29a13"
 sudo systemctl status docker
 ```
+<img width="1366" height="720" alt="image" src="https://github.com/user-attachments/assets/df10438b-da0a-4b72-b87a-87820a999171" />
 
 ---
 
@@ -284,6 +286,7 @@ sudo systemctl status docker
 ```bash id="d29a14"
 sudo docker run hello-world
 ```
+<img width="1366" height="326" alt="image" src="https://github.com/user-attachments/assets/f6e5a7b7-492c-482b-bdd8-4c9fef7551bb" />
 
 ---
 
@@ -305,6 +308,7 @@ Docker:
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
+<img width="1366" height="127" alt="image" src="https://github.com/user-attachments/assets/9521ae7c-4a59-4205-888f-cf44ed9d0ef2" />
 
 ---
 
