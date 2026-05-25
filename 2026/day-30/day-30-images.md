@@ -164,6 +164,7 @@ Config Layer
 ```bash id="d30a09"
 docker create --name mynginx nginx
 ```
+<img width="1051" height="434" alt="image" src="https://github.com/user-attachments/assets/0aca7419-72ee-4f92-a725-45566aeaa808" />
 
 ---
 
@@ -172,6 +173,7 @@ docker create --name mynginx nginx
 ```bash id="d30a10"
 docker start mynginx
 ```
+<img width="1366" height="272" alt="image" src="https://github.com/user-attachments/assets/78867c95-4773-43b7-a09e-7ee6ea09a92a" />
 
 ---
 
@@ -220,6 +222,7 @@ docker kill mynginx
 ```bash id="d30a16"
 docker rm mynginx
 ```
+<img width="1366" height="576" alt="image" src="https://github.com/user-attachments/assets/0cfa7f37-31b8-430e-9179-bd79bc39dd72" />
 
 ---
 
