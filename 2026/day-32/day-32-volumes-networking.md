@@ -192,6 +192,7 @@ docker network create my-app-net
 docker run -dit --name app1 --network my-app-net ubuntu
 docker run -dit --name app2 --network my-app-net ubuntu
 ```
+<img width="1366" height="425" alt="image" src="https://github.com/user-attachments/assets/6a0dfa79-bbb4-4b33-a9ac-bcdea04a2beb" />
 
 ---
 
