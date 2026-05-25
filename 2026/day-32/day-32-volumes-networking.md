@@ -73,6 +73,7 @@ docker run -d \
 -e MYSQL_ROOT_PASSWORD=root \
 mysql
 ```
+<img width="1366" height="712" alt="image" src="https://github.com/user-attachments/assets/80b96186-ca73-4176-b4e7-8d7c9473b3be" />
 
 ---
 
@@ -82,6 +83,7 @@ mysql
 docker volume ls
 docker volume inspect mysql-data
 ```
+<img width="1366" height="228" alt="image" src="https://github.com/user-attachments/assets/2232c0d7-1166-4524-bfa0-85a07103dd41" />
 
 ---
 
