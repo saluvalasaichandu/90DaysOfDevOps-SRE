@@ -56,6 +56,8 @@ CMD ["echo","Hello from my custom image!"]
 ```bash id="d31a04"
 docker build -t my-ubuntu:v1 .
 ```
+<img width="1365" height="623" alt="image" src="https://github.com/user-attachments/assets/926a2337-af6e-482b-98fe-841d926f6906" />
+
 
 ---
 
@@ -64,6 +66,7 @@ docker build -t my-ubuntu:v1 .
 ```bash id="d31a05"
 docker run my-ubuntu:v1
 ```
+<img width="1366" height="52" alt="image" src="https://github.com/user-attachments/assets/03cc6125-9d30-41da-977d-5abf7c6fc5d5" />
 
 ---
 
