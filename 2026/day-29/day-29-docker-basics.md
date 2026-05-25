@@ -336,6 +336,7 @@ sudo docker run -d -p 80:80 nginx
 ```bash id="d29a17"
 docker ps
 ```
+<img width="1366" height="660" alt="image" src="https://github.com/user-attachments/assets/44606df3-a932-4e3d-8c50-91e919ccace2" />
 
 ---
 
@@ -361,6 +362,7 @@ You should see:
 ```text id="d29a20"
 Welcome to nginx!
 ```
+<img width="1366" height="397" alt="image" src="https://github.com/user-attachments/assets/fb1c9b06-ff55-4448-823a-7f69533a8434" />
 
 ---
 
@@ -393,6 +395,7 @@ pwd
 apt update
 cat /etc/os-release
 ```
+<img width="1366" height="492" alt="image" src="https://github.com/user-attachments/assets/3beac601-478e-408c-a5b9-f5c40a7f7082" />
 
 ---
 
@@ -433,6 +436,7 @@ docker stop <container-id>
 ```bash id="d29a27"
 docker rm <container-id>
 ```
+<img width="1366" height="373" alt="image" src="https://github.com/user-attachments/assets/340a2f99-c814-491c-a417-3c8bd230edc5" />
 
 ---
 
@@ -445,6 +449,7 @@ Run container in background:
 ```bash id="d29a28"
 docker run -d nginx
 ```
+<img width="1366" height="453" alt="image" src="https://github.com/user-attachments/assets/c5519af9-1d72-4c18-a60b-9c786db0f883" />
 
 ---
 
