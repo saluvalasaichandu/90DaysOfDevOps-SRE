@@ -95,6 +95,9 @@ EXPOSE 80
 
 CMD ["nginx","-g","daemon off;"]
 ```
+<img width="1366" height="725" alt="image" src="https://github.com/user-attachments/assets/01406ba1-9622-4d04-b660-1e69d1b1b2bf" />
+<img width="1366" height="352" alt="image" src="https://github.com/user-attachments/assets/f4cf9830-8fd3-4247-a57e-7bc74a88bc9e" />
+<img width="1365" height="361" alt="image" src="https://github.com/user-attachments/assets/3adaabdf-c6b2-4649-b482-a71a7de2d329" />
 
 ---
 
