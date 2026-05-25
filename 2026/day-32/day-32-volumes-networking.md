@@ -117,6 +117,8 @@ Open:
 ```text id="d32a09"
 http://localhost:8080
 ```
+<img width="1356" height="542" alt="image" src="https://github.com/user-attachments/assets/761a92d8-ab92-453c-8faa-ab771eba65e9" />
+<img width="1314" height="402" alt="image" src="https://github.com/user-attachments/assets/87b0561c-37c7-4c6b-a251-a44902fd0b98" />
 
 ---
 
