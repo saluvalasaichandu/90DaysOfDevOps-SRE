@@ -1,0 +1,311 @@
+# 🚀 Day 31 – Dockerfile: Build Your Own Images
+
+# 📌 Introduction
+
+Dockerfiles help us create custom Docker images for applications.
+Instead of manually configuring containers every time, we automate everything using code.
+
+Today’s goal:
+
+* Understand Dockerfiles
+* Build custom images
+* Learn Dockerfile instructions
+* Understand CMD vs ENTRYPOINT
+* Build a simple website image
+* Learn Docker caching & optimization
+
+---
+
+# 🐳 What is a Dockerfile?
+
+A Dockerfile is a text file containing instructions to build Docker images automatically.
+
+Example:
+
+```text id="d31a01"
+Dockerfile → Docker Image → Docker Container
+```
+
+---
+
+# 📂 Task 1 – First Dockerfile
+
+# 📌 Create Project Folder
+
+```bash id="d31a02"
+mkdir my-first-image
+cd my-first-image
+```
+
+---
+
+# 📌 Create Dockerfile
+
+```dockerfile id="d31a03"
+FROM ubuntu
+
+RUN apt update && apt install curl -y
+
+CMD ["echo","Hello from my custom image!"]
+```
+
+---
+
+# 📌 Build Image
+
+```bash id="d31a04"
+docker build -t my-ubuntu:v1 .
+```
+
+---
+
+# 📌 Run Container
+
+```bash id="d31a05"
+docker run my-ubuntu:v1
+```
+
+---
+
+# 📌 Output
+
+```text id="d31a06"
+Hello from my custom image!
+```
+
+---
+
+# 📘 Task 2 – Important Dockerfile Instructions
+
+# 📌 Dockerfile Example
+
+```dockerfile id="d31a07"
+FROM ubuntu
+
+RUN apt update && apt install nginx -y
+
+WORKDIR /app
+
+COPY . .
+
+EXPOSE 80
+
+CMD ["nginx","-g","daemon off;"]
+```
+
+---
+
+# 📌 Instruction Explanation
+
+| Instruction | Purpose                       |
+| ----------- | ----------------------------- |
+| `FROM`      | Base image                    |
+| `RUN`       | Execute commands during build |
+| `COPY`      | Copy files                    |
+| `WORKDIR`   | Set working directory         |
+| `EXPOSE`    | Document container port       |
+| `CMD`       | Default command               |
+
+---
+
+# ⚙️ Task 3 – CMD vs ENTRYPOINT
+
+# 📌 CMD Example
+
+```dockerfile id="d31a08"
+CMD ["echo","hello"]
+```
+
+### Run:
+
+```bash id="d31a09"
+docker run image-name
+```
+
+### Override CMD:
+
+```bash id="d31a10"
+docker run image-name ls
+```
+
+CMD gets replaced.
+
+---
+
+# 📌 ENTRYPOINT Example
+
+```dockerfile id="d31a11"
+ENTRYPOINT ["echo"]
+```
+
+### Run:
+
+```bash id="d31a12"
+docker run image-name hello
+```
+
+Output:
+
+```text id="d31a13"
+hello
+```
+
+ENTRYPOINT stays fixed.
+
+---
+
+# 📌 CMD vs ENTRYPOINT
+
+| CMD               | ENTRYPOINT            |
+| ----------------- | --------------------- |
+| Default command   | Fixed executable      |
+| Easily overridden | Arguments appended    |
+| Flexible          | Used for main process |
+
+---
+
+# 🌐 Task 4 – Build Static Website
+
+# 📌 Create index.html
+
+```html id="d31a14"
+<h1>Welcome to My Docker Website</h1>
+```
+
+---
+
+# 📌 Dockerfile
+
+```dockerfile id="d31a15"
+FROM nginx:alpine
+
+COPY index.html /usr/share/nginx/html/
+```
+
+---
+
+# 📌 Build Image
+
+```bash id="d31a16"
+docker build -t my-website:v1 .
+```
+
+---
+
+# 📌 Run Website Container
+
+```bash id="d31a17"
+docker run -d -p 8080:80 my-website:v1
+```
+
+Open browser:
+
+```text id="d31a18"
+http://localhost:8080
+```
+
+---
+
+# 🚫 Task 5 – .dockerignore
+
+# 📌 Create .dockerignore
+
+```text id="d31a19"
+node_modules
+.git
+*.md
+.env
+```
+
+---
+
+# 📌 Why Use .dockerignore?
+
+✅ Smaller images
+✅ Faster builds
+✅ Better security
+✅ Avoid unnecessary files
+
+---
+
+# ⚡ Task 6 – Docker Build Optimization
+
+# 📌 Docker Build Cache
+
+Docker reuses unchanged layers during rebuilds.
+
+Example:
+
+```dockerfile id="d31a20"
+COPY package.json .
+RUN npm install
+COPY . .
+```
+
+---
+
+# 📌 Why Layer Order Matters
+
+Frequently changing files should come last.
+
+Benefits:
+
+* Faster rebuilds
+* Better caching
+* Reduced build time
+
+---
+
+# 🛠️ Useful Docker Commands
+
+| Command         | Purpose            |
+| --------------- | ------------------ |
+| `docker build`  | Build image        |
+| `docker run`    | Run container      |
+| `docker images` | List images        |
+| `docker ps`     | Running containers |
+| `docker logs`   | View logs          |
+| `docker exec`   | Access container   |
+
+---
+
+# 🚀 Real-World DevOps Importance
+
+Dockerfiles are used in:
+
+* CI/CD pipelines
+* Kubernetes deployments
+* Microservices
+* DevSecOps
+* GitOps workflows
+
+Every production container starts with a Dockerfile.
+
+---
+
+# 🎯 What I Learned
+
+✅ Dockerfile basics
+✅ Building custom Docker images
+✅ CMD vs ENTRYPOINT
+✅ Creating static website containers
+✅ Docker caching & optimization
+✅ Using `.dockerignore`
+
+---
+
+# 🏁 Conclusion
+
+Today’s hands-on practice helped me understand:
+
+* How Docker images are created
+* How Dockerfiles automate builds
+* How containers run applications
+* How optimization improves build performance
+
+These concepts are essential before moving to:
+
+* Docker Compose
+* Multi-stage builds
+* Kubernetes deployments
+* CI/CD container pipelines
