@@ -127,6 +127,9 @@ CMD ["echo","hello"]
 ```bash id="d31a09"
 docker run image-name
 ```
+<img width="1366" height="578" alt="image" src="https://github.com/user-attachments/assets/03f36c77-6fc2-49eb-8455-ad9f28681c16" />
+<img width="1212" height="123" alt="image" src="https://github.com/user-attachments/assets/78d1aad3-8631-42f1-8ccd-79e6f6f752de" />
+
 
 ### Override CMD:
 
@@ -155,6 +158,7 @@ Output:
 ```text id="d31a13"
 hello
 ```
+<img width="1366" height="703" alt="image" src="https://github.com/user-attachments/assets/4037b09e-0de5-449a-a732-07ecb596ceaf" />
 
 ENTRYPOINT stays fixed.
 
