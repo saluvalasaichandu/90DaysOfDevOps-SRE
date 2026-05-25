@@ -259,6 +259,7 @@ Remove
 ```bash id="d30a19"
 docker run -d --name webserver -p 8080:80 nginx
 ```
+<img width="1366" height="290" alt="image" src="https://github.com/user-attachments/assets/8fd1cf48-fae3-4b83-bb68-eb4298f04226" />
 
 ---
 
@@ -316,6 +317,7 @@ docker inspect webserver
 ```bash id="d30a25"
 docker stop $(docker ps -q)
 ```
+<img width="1366" height="299" alt="image" src="https://github.com/user-attachments/assets/57d154b1-78b7-4c98-8b91-b246c5423c67" />
 
 ---
 
@@ -324,6 +326,7 @@ docker stop $(docker ps -q)
 ```bash id="d30a26"
 docker container prune -f
 ```
+<img width="902" height="163" alt="image" src="https://github.com/user-attachments/assets/3a7445d3-eefd-4050-8106-fd39b185c038" />
 
 ---
 
@@ -332,6 +335,7 @@ docker container prune -f
 ```bash id="d30a27"
 docker image prune -a
 ```
+<img width="1311" height="482" alt="image" src="https://github.com/user-attachments/assets/ea18025e-5172-49a8-a4be-60e4806c6342" />
 
 ---
 
@@ -340,6 +344,7 @@ docker image prune -a
 ```bash id="d30a28"
 docker system df
 ```
+<img width="773" height="213" alt="image" src="https://github.com/user-attachments/assets/34387239-56c1-4686-971d-b584b8847bb6" />
 
 ---
 
@@ -348,6 +353,7 @@ docker system df
 ```bash id="d30a29"
 docker system prune -a
 ```
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/e5ef6cde-10fd-4ac8-ad19-032e17347965" />
 
 ---
 
