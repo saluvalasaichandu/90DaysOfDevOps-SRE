@@ -23,6 +23,8 @@ Today’s goal:
 ```bash id="d32a01"
 docker run -d --name mysql-db -e MYSQL_ROOT_PASSWORD=root mysql
 ```
+<img width="1366" height="489" alt="image" src="https://github.com/user-attachments/assets/bca02491-29d6-45af-893b-f60e6daa12b0" />
+
 
 ---
 
@@ -42,6 +44,7 @@ Create tables/data inside DB.
 docker stop mysql-db
 docker rm mysql-db
 ```
+<img width="1243" height="391" alt="image" src="https://github.com/user-attachments/assets/a7bcd448-965d-4661-9da6-57b85a6c7660" />
 
 Run new container → Data is lost ❌
 
