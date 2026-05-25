@@ -62,6 +62,7 @@ docker pull alpine
 ```bash id="d30a04"
 docker images
 ```
+<img width="843" height="736" alt="image" src="https://github.com/user-attachments/assets/3422afbb-7adb-43b9-af92-fb6806cd9a88" />
 
 ---
 
@@ -85,6 +86,7 @@ docker images
 ```bash id="d30a05"
 docker inspect nginx
 ```
+<img width="1366" height="729" alt="image" src="https://github.com/user-attachments/assets/35cd69bf-4da3-49fc-833c-0a17e99b21b9" />
 
 ### Information Available
 
@@ -93,14 +95,19 @@ docker inspect nginx
 * Environment variables
 * Architecture
 * Creation date
+  
+<img width="1366" height="605" alt="image" src="https://github.com/user-attachments/assets/16bc2796-9377-4664-93f8-a3d25785a939" />
+
 
 ---
+
 
 # 📌 Remove Image
 
 ```bash id="d30a06"
 docker rmi ubuntu
 ```
+<img width="1365" height="253" alt="image" src="https://github.com/user-attachments/assets/dcdcf58f-643a-408e-92db-865a3354b09b" />
 
 ---
 
@@ -111,6 +118,7 @@ docker rmi ubuntu
 ```bash id="d30a07"
 docker image history nginx
 ```
+<img width="1366" height="489" alt="image" src="https://github.com/user-attachments/assets/b6b31fc6-7995-4b8d-ad1a-f0a044072921" />
 
 ---
 
