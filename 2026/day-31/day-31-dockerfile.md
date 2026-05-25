@@ -191,6 +191,7 @@ FROM nginx:alpine
 
 COPY index.html /usr/share/nginx/html/
 ```
+<img width="1362" height="717" alt="image" src="https://github.com/user-attachments/assets/b3c44ca0-0156-49e8-a788-e7865fae54fc" />
 
 ---
 
@@ -199,6 +200,7 @@ COPY index.html /usr/share/nginx/html/
 ```bash id="d31a16"
 docker build -t my-website:v1 .
 ```
+<img width="1366" height="457" alt="image" src="https://github.com/user-attachments/assets/9e1abe76-cd5b-45cf-b8b9-2458999c583f" />
 
 ---
 
@@ -213,6 +215,7 @@ Open browser:
 ```text id="d31a18"
 http://localhost:8080
 ```
+<img width="1366" height="673" alt="image" src="https://github.com/user-attachments/assets/8cf7d50f-d942-4d8c-a9ba-c7c226c5ebce" />
 
 ---
 
