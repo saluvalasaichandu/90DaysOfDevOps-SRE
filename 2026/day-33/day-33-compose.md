@@ -123,6 +123,9 @@ services:
 volumes:
   mysql-data:
 ```
+<img width="924" height="729" alt="image" src="https://github.com/user-attachments/assets/7a58b400-5814-40ca-8a39-cb3cb27da520" />
+<img width="1041" height="724" alt="image" src="https://github.com/user-attachments/assets/ba079e7f-1dde-4b03-8de7-18e55cdaf1da" />
+
 
 ---
 
@@ -137,6 +140,9 @@ Open:
 ```text id="d33a11"
 http://localhost:8080
 ```
+<img width="1366" height="532" alt="image" src="https://github.com/user-attachments/assets/b3eec2d3-a506-4b8d-8c1c-1ffe79766d24" />
+<img width="1366" height="588" alt="image" src="https://github.com/user-attachments/assets/1c27df26-11ef-466f-9385-8fee599e753d" />
+
 
 ---
 
