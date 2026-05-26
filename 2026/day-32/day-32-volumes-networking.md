@@ -23,6 +23,8 @@ Today’s goal:
 ```bash id="d32a01"
 docker run -d --name mysql-db -e MYSQL_ROOT_PASSWORD=root mysql
 ```
+<img width="1366" height="489" alt="image" src="https://github.com/user-attachments/assets/bca02491-29d6-45af-893b-f60e6daa12b0" />
+
 
 ---
 
@@ -42,6 +44,7 @@ Create tables/data inside DB.
 docker stop mysql-db
 docker rm mysql-db
 ```
+<img width="1243" height="391" alt="image" src="https://github.com/user-attachments/assets/a7bcd448-965d-4661-9da6-57b85a6c7660" />
 
 Run new container → Data is lost ❌
 
@@ -70,6 +73,7 @@ docker run -d \
 -e MYSQL_ROOT_PASSWORD=root \
 mysql
 ```
+<img width="1366" height="712" alt="image" src="https://github.com/user-attachments/assets/80b96186-ca73-4176-b4e7-8d7c9473b3be" />
 
 ---
 
@@ -79,6 +83,7 @@ mysql
 docker volume ls
 docker volume inspect mysql-data
 ```
+<img width="1366" height="228" alt="image" src="https://github.com/user-attachments/assets/2232c0d7-1166-4524-bfa0-85a07103dd41" />
 
 ---
 
@@ -112,6 +117,8 @@ Open:
 ```text id="d32a09"
 http://localhost:8080
 ```
+<img width="1356" height="542" alt="image" src="https://github.com/user-attachments/assets/761a92d8-ab92-453c-8faa-ab771eba65e9" />
+<img width="1314" height="402" alt="image" src="https://github.com/user-attachments/assets/87b0561c-37c7-4c6b-a251-a44902fd0b98" />
 
 ---
 
@@ -185,6 +192,7 @@ docker network create my-app-net
 docker run -dit --name app1 --network my-app-net ubuntu
 docker run -dit --name app2 --network my-app-net ubuntu
 ```
+<img width="1366" height="425" alt="image" src="https://github.com/user-attachments/assets/6a0dfa79-bbb4-4b33-a9ac-bcdea04a2beb" />
 
 ---
 
