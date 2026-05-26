@@ -65,6 +65,7 @@ services:
     ports:
       - "8080:80"
 ```
+<img width="1366" height="470" alt="image" src="https://github.com/user-attachments/assets/df411f53-52dc-45b9-87e6-d333259a6021" />
 
 ---
 
@@ -73,12 +74,16 @@ services:
 ```bash id="d33a06"
 docker compose up -d
 ```
+<img width="1193" height="730" alt="image" src="https://github.com/user-attachments/assets/cbbf8f6a-7342-4d1b-b77d-02f536ddaacf" />
 
 Open:
 
 ```text id="d33a07"
 http://localhost:8080
 ```
+<img width="1360" height="395" alt="image" src="https://github.com/user-attachments/assets/58db000e-ef85-408c-9f7d-4e5b9b6c0f36" />
+<img width="1366" height="203" alt="image" src="https://github.com/user-attachments/assets/1cfec997-f4b9-4622-b762-fa729026fd47" />
+
 
 ---
 
