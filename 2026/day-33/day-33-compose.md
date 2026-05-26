@@ -39,8 +39,9 @@ docker-compose.yml
 # 📌 Check Version
 
 ```bash id="d33a03"
-docker compose version
+docker-compose version
 ```
+<img width="957" height="161" alt="image" src="https://github.com/user-attachments/assets/0f8c7336-509d-4bd7-904c-3cc8f16fdfcc" />
 
 ---
 
