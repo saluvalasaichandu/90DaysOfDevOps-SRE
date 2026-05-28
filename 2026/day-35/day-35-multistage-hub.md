@@ -108,6 +108,7 @@ CMD ["node","app.js"]
 ```bash id="d35a06"
 docker build -t node-multi:v1 .
 ```
+<img width="1364" height="724" alt="image" src="https://github.com/user-attachments/assets/5da8bf75-e0a7-4bf3-bd0d-4b20a8e059ed" />
 
 ---
 
@@ -116,6 +117,7 @@ docker build -t node-multi:v1 .
 ```bash id="d35a07"
 docker images
 ```
+<img width="1366" height="722" alt="image" src="https://github.com/user-attachments/assets/ac5983ae-baa4-4fc1-8ee4-624fa37dfdfb" />
 
 ---
 
