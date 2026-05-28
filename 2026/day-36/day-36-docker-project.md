@@ -237,6 +237,9 @@ docker compose up -d --build
 ```bash id="d36a11"
 docker ps
 ```
+<img width="1366" height="729" alt="image" src="https://github.com/user-attachments/assets/21d99b4f-7151-4e91-bb21-890d93eeeb6b" />
+<img width="1366" height="731" alt="image" src="https://github.com/user-attachments/assets/c4531f5c-426d-4792-962c-3cd55f0d7217" />
+
 
 ---
 
