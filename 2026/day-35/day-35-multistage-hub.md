@@ -40,6 +40,7 @@ Benefits:
 ```javascript id="d35a01"
 console.log("Hello from Docker");
 ```
+<img width="1201" height="732" alt="image" src="https://github.com/user-attachments/assets/58e1dc86-138a-426d-a197-a56d7f90b64f" />
 
 ---
 
@@ -62,6 +63,7 @@ CMD ["node","app.js"]
 ```bash id="d35a03"
 docker build -t node-single:v1 .
 ```
+<img width="1364" height="715" alt="image" src="https://github.com/user-attachments/assets/87f83578-a627-4027-9b6f-84c4034805d1" />
 
 ---
 
