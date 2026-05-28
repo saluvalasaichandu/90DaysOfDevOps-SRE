@@ -118,6 +118,10 @@ volumes:
 ```bash id="d34a06"
 docker compose up -d
 ```
+<img width="1366" height="720" alt="image" src="https://github.com/user-attachments/assets/26550627-1a62-45f6-8526-ca8ad1596ad7" />
+
+<img width="1366" height="564" alt="image" src="https://github.com/user-attachments/assets/97d104a9-2a5b-40a6-9a90-2bc4acfca332" />
+
 
 ---
 
@@ -128,6 +132,7 @@ Open:
 ```text id="d34a07"
 http://localhost:5000
 ```
+<img width="1366" height="242" alt="image" src="https://github.com/user-attachments/assets/d3af1b49-3a9c-4857-958a-b1b8b4374c56" />
 
 ---
 
@@ -140,6 +145,7 @@ depends_on:
   db:
     condition: service_healthy
 ```
+<img width="811" height="224" alt="image" src="https://github.com/user-attachments/assets/d150a1df-6455-4a55-8760-d386c9bf97bd" />
 
 ---
 
