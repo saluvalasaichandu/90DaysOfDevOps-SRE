@@ -238,8 +238,8 @@ docker compose up -d --build
 docker ps
 ```
 <img width="1366" height="729" alt="image" src="https://github.com/user-attachments/assets/21d99b4f-7151-4e91-bb21-890d93eeeb6b" />
-<img width="1366" height="731" alt="image" src="https://github.com/user-attachments/assets/c4531f5c-426d-4792-962c-3cd55f0d7217" />
 
+<img width="1366" height="727" alt="image" src="https://github.com/user-attachments/assets/8911a2c8-e309-4a16-845d-9b4a82355778" />
 
 ---
 
@@ -256,6 +256,7 @@ Expected Output:
 ```text id="d36a13"
 🚀 Flask App Connected to MySQL Successfully!
 ```
+<img width="980" height="223" alt="image" src="https://github.com/user-attachments/assets/259582fb-1140-4aff-ab42-152ff9bf18d5" />
 
 ---
 
