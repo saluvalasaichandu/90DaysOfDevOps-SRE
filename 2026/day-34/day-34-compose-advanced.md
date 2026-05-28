@@ -57,6 +57,7 @@ app.run(host='0.0.0.0', port=5000)
 ```text id="d34a03"
 flask
 ```
+<img width="924" height="715" alt="image" src="https://github.com/user-attachments/assets/faddbbdc-c987-40b4-b7af-903f7c262fda" />
 
 ---
 
