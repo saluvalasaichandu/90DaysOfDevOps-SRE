@@ -1,0 +1,22 @@
+server:
+  name: app-server
+  ip: 192.168.1.10
+  port: 8080
+
+database:
+  host: mysql-db
+  name: employee_db
+
+  credentials:
+    user: admin
+    password: admin123
+
+startup_script_pipe: |
+  #!/bin/bash
+  yum update -y
+  systemctl start nginx
+
+startup_script_folded: >
+  This is a sample startup script
+  that will be converted into
+  a single line.

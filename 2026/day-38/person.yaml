@@ -1,0 +1,13 @@
+name: Saichandu
+role: DevOps Engineer
+experience_years: 4
+learning: true
+
+tools:
+  - Docker
+  - Kubernetes
+  - Jenkins
+  - Terraform
+  - AWS
+
+hobbies: [Travelling, Blogging]
