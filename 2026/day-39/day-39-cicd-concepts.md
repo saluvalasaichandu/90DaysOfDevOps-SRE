@@ -1,5 +1,3 @@
-Here is the complete **Day 39 – What is CI/CD?** in your GitHub README format, focused specifically on **Jenkins CI/CD concepts** so it aligns with your upcoming Jenkins learning journey.
-
 # 🚀 Day 39 – What is CI/CD?
 
 ## 📌 Introduction
