@@ -48,6 +48,7 @@ pipeline {
     }
 }
 ```
+<img width="1366" height="544" alt="image" src="https://github.com/user-attachments/assets/3e6738fb-9434-43a8-a251-b54db5567ee0" />
 
 ---
 
@@ -84,6 +85,7 @@ Verify Container:
 ```bash
 docker ps
 ```
+<img width="1366" height="266" alt="image" src="https://github.com/user-attachments/assets/72fdc1e7-6634-4ecd-84e6-37f7c5519fbd" />
 
 Output:
 
@@ -97,6 +99,7 @@ Access Application:
 ```text
 http://<server-ip>:8080
 ```
+<img width="1366" height="447" alt="image" src="https://github.com/user-attachments/assets/23531cad-3bc2-445e-9b1b-e140ea0234c1" />
 
 Nginx Welcome Page should appear.
 
