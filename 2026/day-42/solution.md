@@ -2,45 +2,65 @@
 
 ## Objective
 
-Configure multiple Jenkins agents (Linux and Windows) to distribute build workloads, execute jobs in parallel, and improve CI/CD pipeline scalability.
+Configure Jenkins Controller and Jenkins Agent on separate EC2 instances and execute builds on remote agents using labels.
 
 ---
 
 # Architecture
 
 ```text
-                    Jenkins Controller
-                           |
-        -----------------------------------------
-        |                                       |
-   Linux Agent                           Windows Agent
-(Label: linux)                       (Label: windows)
-        |                                       |
- Build/Test Jobs                     Build/Test Jobs
+AWS Cloud
+
+┌─────────────────────────────┐
+│ Jenkins Controller          │
+│ Amazon Linux EC2            │
+│ User: ec2-user              │
+└──────────────┬──────────────┘
+               │ SSH
+               │
+┌──────────────▼──────────────┐
+│ Jenkins Agent              │
+│ Ubuntu EC2                 │
+│ User: ubuntu               │
+└────────────────────────────┘
 ```
 
 ---
 
 # Prerequisites
 
-* Jenkins Controller Installed
-* Java Installed on Agents
-* Jenkins Agent Port Enabled (50000)
-* SSH Access for Linux Agent
-* Windows Agent Service or Java Agent
-* Git Installed
-* Docker Installed (Optional)
+## Jenkins Controller
+
+```bash
+Amazon Linux EC2
+
+Jenkins Installed
+
+Java Installed
+
+Git Installed
+```
+
+Verify:
+
+```bash
+java -version
+
+git --version
+
+systemctl status jenkins
+```
 
 ---
 
-# Step 1: Configure Linux Agent
+## Jenkins Agent
 
-## Create Linux VM
+Launch Ubuntu EC2.
 
-Example:
+Connect:
 
 ```bash
-Ubuntu 22.04 EC2 Instance
+ssh -i key.pem ubuntu@AGENT-IP
 ```
 
 Install Java:
@@ -57,121 +77,104 @@ Install Git:
 
 ```bash
 sudo apt install git -y
-```
-
----
-
-## Add Linux Node in Jenkins
-
-Navigate:
-
-```text
-Manage Jenkins
-        ↓
-Nodes
-        ↓
-New Node
-```
-
-Enter:
-
-```text
-Node Name : linux-agent
-
-Type      : Permanent Agent
-```
-
----
-
-## Configure Node
-
-```text
-Remote Root Directory:
-/home/jenkins
-
-Labels:
-linux
-
-Usage:
-Use this node as much as possible
-```
-
-Launch Method:
-
-```text
-Launch agents via SSH
-```
-
-Provide:
-
-```text
-Host IP
-SSH Credentials
-```
-
-Save and Launch Agent.
-
----
-
-## Verify Linux Agent
-
-```text
-Manage Jenkins
-        ↓
-Nodes
-        ↓
-linux-agent
-```
-
-Expected:
-
-```text
-Status : Connected
-```
-
----
-
-# Step 2: Configure Windows Agent
-
-## Create Windows VM
-
-Example:
-
-```text
-Windows Server 2022
-```
-
-Install:
-
-```text
-Java 17
-Git
-```
-
-Verify:
-
-```powershell
-java -version
 
 git --version
 ```
 
 ---
 
-## Create Windows Node
+# Step 1: Create SSH Key for Jenkins
+
+On Jenkins Controller:
+
+```bash
+sudo su -
+
+ssh-keygen
+```
+
+Press Enter for all prompts.
+
+Generated files:
 
 ```text
+/root/.ssh/id_rsa
+
+/root/.ssh/id_rsa.pub
+```
+
+---
+
+# Step 2: Copy Public Key to Agent
+
+Display key:
+
+```bash
+cat ~/.ssh/id_rsa.pub
+```
+
+Copy output.
+
+---
+
+On Ubuntu Agent:
+
+```bash
+mkdir -p ~/.ssh
+
+vi ~/.ssh/authorized_keys
+```
+
+Paste public key.
+
+Set permissions:
+
+```bash
+chmod 700 ~/.ssh
+
+chmod 600 ~/.ssh/authorized_keys
+```
+
+---
+
+# Step 3: Test SSH Connectivity
+
+From Jenkins Controller:
+
+```bash
+ssh ubuntu@AGENT-IP
+```
+
+Expected:
+
+```text
+Welcome to Ubuntu
+```
+
+No password should be requested.
+
+---
+
+# Step 4: Add Agent in Jenkins
+
+Navigate:
+
+```text
+Dashboard
+     ↓
 Manage Jenkins
-        ↓
+     ↓
 Nodes
-        ↓
+     ↓
 New Node
 ```
 
-Name:
+---
+
+Node Name:
 
 ```text
-windows-agent
+ubuntu-agent
 ```
 
 Type:
@@ -180,137 +183,183 @@ Type:
 Permanent Agent
 ```
 
+Click Create.
+
 ---
 
-## Configure
+# Step 5: Configure Agent
+
+Node Configuration:
 
 ```text
-Remote Root Directory
+Name:
+ubuntu-agent
 
-C:\Jenkins
+Remote Root Directory:
+/home/ubuntu/jenkins
+
+Labels:
+linux ubuntu
+
+Usage:
+Use this node as much as possible
 ```
 
-Label:
-
-```text
-windows
-```
+---
 
 Launch Method:
 
 ```text
-Launch agent by connecting it to controller
+Launch agents via SSH
 ```
 
----
-
-## Connect Agent
-
-Download:
+Host:
 
 ```text
-agent.jar
+AGENT-IP
 ```
 
-Run:
+Credentials:
 
-```powershell
-java -jar agent.jar `
--url http://JENKINS-IP:8080 `
--secret SECRET_KEY `
--name windows-agent `
--workDir "C:\Jenkins"
+```text
+SSH Username with private key
+
+Username:
+ubuntu
+
+Private Key:
+Paste Jenkins Controller private key
 ```
+
+Save.
 
 ---
 
-## Verify Windows Agent
+# Step 6: Verify Agent Connection
+
+Navigate:
+
+```text
+Manage Jenkins
+      ↓
+Nodes
+```
 
 Expected:
 
 ```text
-windows-agent
+ubuntu-agent
 
 Status : Connected
 ```
 
 ---
 
-# Step 3: Verify Agent Labels
+# Step 7: Verify Label
 
-Navigate:
-
-```text
-Manage Jenkins
-        ↓
-Nodes
-```
-
-Verify:
+Node should contain:
 
 ```text
-linux-agent
-
-Labels:
 linux
-```
 
-```text
-windows-agent
-
-Labels:
-windows
+ubuntu
 ```
 
 ---
 
-# Step 4: Jenkinsfile Using Agent Labels
+# Step 8: Create Jenkins Pipeline
 
-## Linux Build
+Create:
+
+```text
+New Item
+    ↓
+Pipeline
+    ↓
+agent-demo
+```
+
+---
+
+Pipeline Script
 
 ```groovy
 pipeline {
 
-    agent none
+    agent {
+        label 'linux'
+    }
 
     stages {
 
-        stage('Linux Build') {
-
-            agent {
-                label 'linux'
-            }
+        stage('Node Details') {
 
             steps {
 
                 sh 'hostname'
 
+                sh 'whoami'
+
                 sh 'uname -a'
             }
         }
 
-        stage('Windows Build') {
-
-            agent {
-                label 'windows'
-            }
+        stage('Java Version') {
 
             steps {
 
-                bat 'hostname'
+                sh 'java -version'
+            }
+        }
 
-                bat 'ver'
+        stage('Git Version') {
+
+            steps {
+
+                sh 'git --version'
             }
         }
     }
 }
 ```
 
+Save.
+
 ---
 
-# Step 5: Run Jobs in Parallel
+# Step 9: Run Pipeline
 
-## Parallel Execution Pipeline
+Click:
+
+```text
+Build Now
+```
+
+Expected Output:
+
+```text
+Running on ubuntu-agent
+
+hostname
+
+ip-172-31-xx-xx
+
+whoami
+
+ubuntu
+
+java -version
+
+openjdk 17
+
+git --version
+
+git version 2.x
+```
+
+---
+
+# Step 10: Parallel Jobs Example
 
 ```groovy
 pipeline {
@@ -319,35 +368,34 @@ pipeline {
 
     stages {
 
-        stage('Parallel Build') {
+        stage('Parallel Execution') {
 
             parallel {
 
-                stage('Linux Job') {
+                stage('Controller Job') {
+
+                    agent any
+
+                    steps {
+
+                        sh 'echo Running on Controller'
+
+                        sh 'hostname'
+                    }
+                }
+
+                stage('Agent Job') {
 
                     agent {
+
                         label 'linux'
                     }
 
                     steps {
 
-                        sh 'echo Running on Linux Agent'
+                        sh 'echo Running on Ubuntu Agent'
 
-                        sh 'sleep 10'
-                    }
-                }
-
-                stage('Windows Job') {
-
-                    agent {
-                        label 'windows'
-                    }
-
-                    steps {
-
-                        bat 'echo Running on Windows Agent'
-
-                        bat 'timeout /t 10'
+                        sh 'hostname'
                     }
                 }
             }
@@ -361,58 +409,66 @@ pipeline {
 # Expected Output
 
 ```text
-Parallel Build
+Parallel Execution
 
-├── Linux Job
-│     Running on Linux Agent
+├── Controller Job
+│   Running on Controller
 │
-└── Windows Job
-      Running on Windows Agent
+└── Agent Job
+    Running on Ubuntu Agent
 ```
 
-Both jobs execute simultaneously.
+Both stages run simultaneously.
 
 ---
 
 # Verification
 
-## Verify Agent Allocation
-
-Build Console Output:
-
-Linux Stage:
-
-```bash
-Running on linux-agent
-```
-
-Windows Stage:
+## Verify Agent Status
 
 ```text
-Running on windows-agent
+Manage Jenkins
+     ↓
+Nodes
+
+ubuntu-agent
+
+Connected
 ```
 
 ---
 
-## Verify Node Usage
+## Verify Build Logs
+
+```text
+Running on ubuntu-agent
+
+java -version
+
+git --version
+
+hostname
+```
+
+---
+
+## Verify Executor Usage
 
 Navigate:
 
 ```text
 Dashboard
-      ↓
+     ↓
 Build Executor Status
 ```
 
 Expected:
 
 ```text
-linux-agent     Busy
+Jenkins Controller : Busy
 
-windows-agent   Busy
+ubuntu-agent : Busy
 ```
-
-during execution.
 
 ---
 
@@ -420,129 +476,77 @@ during execution.
 
 ## Faster Builds
 
-Multiple jobs run simultaneously.
-
-Example:
-
-```text
-Without Agents
-
-Build 1 = 10 min
-Build 2 = 10 min
-
-Total = 20 min
-```
-
-```text
-With Agents
-
-Build 1 = 10 min
-Build 2 = 10 min
-
-Total = 10 min
-```
+Jobs run on multiple machines simultaneously.
 
 ---
 
 ## Better Resource Utilization
 
-Workload distributed across multiple machines.
+Build workload is distributed.
 
 ---
 
-## Platform-Specific Testing
+## Scalability
 
-```text
-Linux Application
-```
-
-runs on:
-
-```text
-Linux Agent
-```
-
-```text
-Windows Application
-```
-
-runs on:
-
-```text
-Windows Agent
-```
+Additional agents can be added easily.
 
 ---
 
-## Improved Reliability
+## Isolation
 
-If one agent fails, workloads can be shifted to another agent.
-
----
-
-# Challenges of Distributed Agents
-
-## Agent Connectivity Issues
-
-Network failures can disconnect agents.
+Build failures on one node do not affect others.
 
 ---
 
-## Tool Version Differences
+# Challenges
 
-Example:
+## Agent Connectivity
 
-```text
-Java 11 on Linux
-
-Java 17 on Windows
-```
-
-may produce inconsistent builds.
+SSH failures can disconnect agents.
 
 ---
 
-## Resource Management
+## Tool Versions
 
-Agents require CPU, Memory, and Storage monitoring.
-
----
-
-## Security Risks
-
-Credentials must be securely managed across nodes.
+Different Java or Git versions may cause issues.
 
 ---
 
-# Interview Questions
+## Resource Monitoring
 
-## 1. What are the benefits and challenges of using distributed agents in Jenkins?
+CPU and memory usage should be monitored.
+
+---
+
+# Interview Question 1
+
+## What are the benefits and challenges of using distributed agents in Jenkins?
 
 ### Answer
 
 Benefits:
 
-* Faster pipeline execution
+* Faster execution
 * Parallel builds
 * Better scalability
-* Platform-specific testing
-* Improved reliability
+* Workload distribution
 
 Challenges:
 
+* SSH connectivity issues
+* Version mismatches
 * Agent maintenance
-* Network issues
-* Tool version mismatches
-* Security management
 * Resource monitoring
 
 ---
 
-## 2. How can you ensure that jobs are assigned to the correct agent in a multi-platform environment?
+# Interview Question 2
+
+## How can you ensure jobs are assigned to the correct agent?
 
 ### Answer
 
-By assigning labels to agents and using those labels inside Jenkins pipelines.
+Use labels.
 
 Example:
 
@@ -552,13 +556,24 @@ agent {
 }
 ```
 
-```groovy
-agent {
-    label 'windows'
-}
-```
-
-Jenkins automatically schedules jobs on the matching node based on the label.
+Jenkins automatically runs the job on nodes having the matching label.
 
 ---
 
+# Conclusion
+
+Successfully configured:
+
+```text
+Amazon Linux EC2
+        ↓
+Jenkins Controller
+        ↓
+SSH Connection
+        ↓
+Ubuntu EC2 Agent
+        ↓
+Pipeline Execution
+```
+
+Verified agent connectivity, label-based scheduling, and distributed build execution.
