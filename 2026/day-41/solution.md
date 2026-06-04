@@ -2,166 +2,138 @@
 
 ## Objective
 
-Implement a Jenkins Multi-Branch Pipeline for a microservices-based application where each service is stored in a separate Git repository. The pipeline should automatically discover branches, build applications, execute tests, create Docker images, and deploy services.
+Learn how Jenkins Multi-Branch Pipelines automatically discover branches and create separate pipelines for each branch.
+
+For this demo, instead of creating multiple real microservices, we will use a simple GitHub repository with multiple branches to understand the concept.
 
 ---
 
 # Architecture
 
-## Microservices Repositories
-
 ```text
-GitHub
+GitHub Repository
 
-├── user-service
-├── product-service
-└── order-service
+jenkins-multibranch-demo
+
+├── main
+└── feature-login
 ```
 
-Each repository contains:
+Jenkins automatically creates separate pipelines for each branch.
+
+---
+
+# Step 1: Create GitHub Repository
+
+Create a repository:
 
 ```text
-user-service/
-├── src/
-├── Dockerfile
+jenkins-multibranch-demo
+```
+
+Repository Structure:
+
+```text
+jenkins-multibranch-demo
+
 ├── Jenkinsfile
-└── pom.xml
+└── index.html
 ```
 
 ---
 
-# Step 1: Configure Multi-Branch Pipeline
+## index.html
 
-## Create Pipeline
-
-```text
-Jenkins Dashboard
-      ↓
-New Item
-      ↓
-Multibranch Pipeline
-      ↓
-microservices-pipeline
+```html
+<h1>Hello Jenkins MultiBranch Pipeline</h1>
 ```
+
+Push the code to GitHub.
 
 ---
 
-## Configure GitHub Repository
+# Step 2: Create Feature Branch
 
-Branch Source:
-
-```text
-GitHub
-```
-
-Repository URL:
+Create a new branch:
 
 ```bash
-https://github.com/your-org/user-service.git
+git checkout -b feature-login
 ```
 
-Credentials:
+Modify the file:
 
-```text
-GitHub Personal Access Token
+```html
+<h1>Hello Feature Login Branch</h1>
 ```
 
-Branch Discovery:
+Commit and Push:
 
-```text
-✓ Discover Branches
+```bash
+git add .
 
-✓ Discover Pull Requests
+git commit -m "Added feature-login branch"
+
+git push origin feature-login
 ```
 
-Scan Repository:
+Now GitHub contains:
 
 ```text
-Periodically if not otherwise run
-```
-
-or
-
-```text
-GitHub Webhook
+main
+feature-login
 ```
 
 ---
 
-# Step 2: Jenkinsfile
+# Step 3: Create Jenkinsfile
 
-## Jenkinsfile
+Add the following Jenkinsfile to the repository root.
 
 ```groovy
 pipeline {
 
     agent any
 
-    environment {
-        IMAGE_NAME = "saichandu/user-service"
-        BUILD_TAG = "${BUILD_NUMBER}"
-    }
-
     stages {
 
         stage('Checkout') {
             steps {
-                checkout scm
+                echo 'Checkout Completed'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                echo 'Building Application'
             }
         }
 
         stage('Test') {
+
             parallel {
 
                 stage('Unit Test') {
                     steps {
-                        sh 'mvn test'
+                        echo 'Running Unit Tests'
                     }
                 }
 
-                stage('Code Quality') {
+                stage('Code Scan') {
                     steps {
-                        echo 'Running SonarQube Scan'
+                        echo 'Running Code Scan'
                     }
                 }
-
-                stage('Security Scan') {
-                    steps {
-                        echo 'Running Trivy Scan'
-                    }
-                }
-            }
-        }
-
-        stage('Docker Build') {
-            steps {
-                sh """
-                docker build -t $IMAGE_NAME:$BUILD_TAG .
-                """
-            }
-        }
-
-        stage('Docker Push') {
-            steps {
-                sh """
-                docker push $IMAGE_NAME:$BUILD_TAG
-                """
             }
         }
 
         stage('Deploy') {
+
             when {
                 branch 'main'
             }
 
             steps {
-                echo 'Deploying to Kubernetes'
+                echo 'Deploying Application'
             }
         }
     }
@@ -170,140 +142,193 @@ pipeline {
 
 ---
 
-# Pipeline Design
+# Step 4: Create Multi-Branch Pipeline in Jenkins
+
+Navigate to:
+
+```text
+Jenkins Dashboard
+        ↓
+New Item
+        ↓
+Multibranch Pipeline
+        ↓
+microservice-demo
+```
+
+Click OK.
+
+---
+
+# Step 5: Configure GitHub Repository
+
+Under Branch Sources:
+
+```text
+GitHub
+```
+
+Repository URL:
+
+```text
+https://github.com/<your-username>/jenkins-multibranch-demo.git
+```
+
+Add GitHub credentials if required.
+
+Enable:
+
+```text
+✓ Discover Branches
+
+✓ Discover Pull Requests
+```
+
+Save the configuration.
+
+---
+
+# Step 6: Scan Repository
+
+Click:
+
+```text
+Scan Repository Now
+```
+
+Jenkins automatically discovers branches.
+
+Expected Result:
+
+```text
+microservice-demo
+
+├── main
+└── feature-login
+```
+
+Separate pipelines are created automatically.
+
+---
+
+# Step 7: Run Pipeline
+
+### Build Main Branch
+
+Stages Executed:
+
+```text
+Checkout
+Build
+Unit Test
+Code Scan
+Deploy
+```
+
+---
+
+### Build Feature Branch
+
+Stages Executed:
+
+```text
+Checkout
+Build
+Unit Test
+Code Scan
+```
+
+Deploy stage is skipped because:
+
+```groovy
+when {
+    branch 'main'
+}
+```
+
+Only the main branch is allowed to deploy.
+
+---
+
+# Step 8: Simulate Pull Request Workflow
+
+Workflow:
+
+```text
+Developer
+     ↓
+
+feature-login Branch
+     ↓
+
+Jenkins Validation
+     ↓
+
+Pull Request
+     ↓
+
+Merge to Main
+     ↓
+
+Main Pipeline Runs
+     ↓
+
+Deploy
+```
+
+This is similar to how real organizations validate code before deployment.
+
+---
+
+# Pipeline Design Explanation
 
 ## Checkout Stage
 
-Pulls source code from GitHub repository.
+Retrieves source code from GitHub.
 
 ```groovy
-checkout scm
+echo 'Checkout Completed'
 ```
 
 ---
 
 ## Build Stage
 
-Compiles the application source code.
+Simulates application build.
 
-```bash
-mvn clean package
+```groovy
+echo 'Building Application'
 ```
 
 ---
 
 ## Test Stage
 
-Runs multiple validation tasks in parallel:
+Runs multiple test activities in parallel.
 
-* Unit Testing
-* Code Quality Scan
-* Security Scan
+```groovy
+parallel
+```
 
 Benefits:
 
 * Faster execution
-* Reduced pipeline duration
+* Reduced pipeline time
 * Early issue detection
-
----
-
-## Docker Build Stage
-
-Builds application Docker image.
-
-```bash
-docker build -t user-service:1.0 .
-```
-
----
-
-## Docker Push Stage
-
-Pushes image to Docker Hub.
-
-```bash
-docker push user-service:1.0
-```
 
 ---
 
 ## Deploy Stage
 
-Deploys application only from:
+Runs only for the main branch.
 
-```text
-main branch
+```groovy
+when {
+ branch 'main'
+}
 ```
 
-This prevents accidental deployment from feature branches.
-
----
-
-# Step 3: Simulate Merge Scenario
-
-## Create Feature Branch
-
-```bash
-git checkout -b feature-login
-```
-
----
-
-## Make Changes
-
-```bash
-git add .
-
-git commit -m "Added Login Feature"
-```
-
----
-
-## Push Branch
-
-```bash
-git push origin feature-login
-```
-
----
-
-## Jenkins Automatic Detection
-
-Jenkins scans repository and creates:
-
-```text
-feature-login
-```
-
-pipeline automatically.
-
----
-
-## Pull Request Workflow
-
-```text
-feature-login
-        ↓
-Pull Request
-        ↓
-develop
-        ↓
-Jenkins Validation
-        ↓
-Merge
-```
-
-Pipeline executes:
-
-```text
-Checkout
-Build
-Test
-Security Scan
-```
-
-before allowing merge.
+Prevents accidental deployments from feature branches.
 
 ---
 
@@ -311,99 +336,56 @@ before allowing merge.
 
 ## Verify Branch Discovery
 
-```text
-Jenkins Dashboard
+Jenkins Dashboard:
 
-microservices-pipeline
+```text
+microservice-demo
 
 ├── main
-├── develop
 ├── feature-login
-└── feature-payment
 ```
 
 ---
 
 ## Verify Build Logs
 
-```text
-Build Successful
-
-Tests Passed
-
-Docker Image Created
-
-Deployment Successful
-```
-
----
-
-## Verify Docker Images
-
-```bash
-docker images
-```
-
-Expected:
+Expected Output:
 
 ```text
-user-service
+Checkout Completed
 
-product-service
+Building Application
 
-order-service
+Running Unit Tests
+
+Running Code Scan
+
+Deploying Application
 ```
 
 ---
 
-## Verify Running Containers
+# Benefits of Multi-Branch Pipelines
 
-```bash
-docker ps
-```
+### Automatic Branch Discovery
 
----
+No need to create separate Jenkins jobs manually.
 
-# How Multi-Branch Pipelines Help Microservices
+### Better Continuous Integration
 
-## 1. Automatic Branch Discovery
+Every branch is tested automatically.
 
-Every branch automatically gets its own pipeline.
+### Pull Request Validation
 
----
+Code quality is verified before merge.
 
-## 2. Independent Development
+### Faster Feedback
 
-Teams can work on different services without affecting production.
+Developers quickly know if changes break the build.
 
----
+### Safer Deployments
 
-## 3. Faster Feedback
-
-Developers receive build and test results immediately.
-
----
-
-## 4. PR Validation
-
-Code quality is verified before merging.
-
----
-
-## 5. Better Scalability
-
-Supports hundreds of repositories and branches.
-
----
-
-# Benefits in Production
-
-* Faster releases
-* Reduced deployment failures
-* Improved developer productivity
-* Automated testing
-* Better code quality
-* Parallel execution
+Only approved branches can deploy.
 
 ---
 
@@ -413,7 +395,7 @@ Supports hundreds of repositories and branches.
 
 ### Answer
 
-Multi-Branch Pipelines automatically discover branches and create separate pipelines for each branch. This enables independent development, testing, and validation of microservices, ensuring faster feedback and reducing integration issues before code reaches production.
+A Multi-Branch Pipeline automatically discovers branches and creates separate pipelines for each branch. This allows developers to build and test code independently before merging changes into the main branch, reducing integration issues.
 
 ---
 
@@ -424,36 +406,36 @@ Multi-Branch Pipelines automatically discover branches and create separate pipel
 Common challenges include:
 
 * Merge conflicts
-* Dependency version mismatches
-* Failed integration tests
-* Configuration drift
-* Resource contention on Jenkins agents
+* Failed tests after merge
+* Dependency version conflicts
+* Environment configuration differences
+* Deployment failures
 
-These issues can be mitigated using automated testing, code reviews, branch protection rules, and proper version management.
+These can be reduced through automated testing, code reviews, and branch protection rules.
 
 ---
 
 # Conclusion
 
-Successfully implemented a Jenkins Multi-Branch Pipeline for a Microservices Application.
+Successfully implemented a Jenkins Multi-Branch Pipeline.
 
-### Workflow
+## Workflow
 
 ```text
 GitHub Branch
       ↓
+
 Jenkins Multi-Branch Pipeline
       ↓
+
 Checkout
       ↓
+
 Build
       ↓
+
 Parallel Testing
       ↓
-Docker Build
-      ↓
-Docker Push
-      ↓
-Deploy
-```
+
+Deploy (Main Branch Only)
 
