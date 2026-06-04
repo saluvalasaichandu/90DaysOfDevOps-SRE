@@ -139,6 +139,8 @@ pipeline {
     }
 }
 ```
+<img width="1364" height="393" alt="image" src="https://github.com/user-attachments/assets/70099d1d-a28c-473b-a327-3610b50b3dd2" />
+
 <img width="1366" height="671" alt="image" src="https://github.com/user-attachments/assets/25137fa8-a1b3-47cf-8980-d9174e8e059d" />
 
 ---
@@ -225,6 +227,7 @@ Unit Test
 Code Scan
 Deploy
 ```
+<img width="1364" height="603" alt="image" src="https://github.com/user-attachments/assets/6c0c61ab-bcd3-4d1d-96cf-c9f8ab302864" />
 
 ---
 
@@ -290,6 +293,7 @@ Retrieves source code from GitHub.
 ```groovy
 echo 'Checkout Completed'
 ```
+<img width="1366" height="611" alt="image" src="https://github.com/user-attachments/assets/497f8fa6-64e3-4e82-aa5a-bea1b143792f" />
 
 ---
 
