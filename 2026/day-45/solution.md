@@ -54,8 +54,8 @@ security vulnerabilities.
 ## Amazon Linux
 
 ```bash
-sudo rpm -ivh \
-https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.64.1_Linux-64bit.rpm
+curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
+
 ```
 
 Verify:
