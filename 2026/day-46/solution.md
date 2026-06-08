@@ -94,6 +94,7 @@ pipeline {
     }
 }
 ```
+<img width="1364" height="669" alt="image" src="https://github.com/user-attachments/assets/b0d1f4aa-9803-440f-a310-e458d0666346" />
 
 ---
 
@@ -110,6 +111,7 @@ Parameterized-Pipeline
 ```
 
 Paste Jenkinsfile and Save.
+<img width="1366" height="665" alt="image" src="https://github.com/user-attachments/assets/9e034f22-4ebf-4c3a-b4ba-b4b96574d0f4" />
 
 ---
 
@@ -184,6 +186,7 @@ Running Tests
 
 Deploy Stage Skipped
 ```
+<img width="1366" height="682" alt="image" src="https://github.com/user-attachments/assets/d2559289-6949-459b-b125-d5e59332fcce" />
 
 ---
 
