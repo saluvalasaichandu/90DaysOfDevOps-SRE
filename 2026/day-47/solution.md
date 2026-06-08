@@ -1,4 +1,4 @@
-# Task 8: Integrate Email Notifications for Build Events
+<img width="1363" height="617" alt="image" src="https://github.com/user-attachments/assets/8bdc91b5-9a65-4022-b400-74faa3b6cbf9" /># Task 8: Integrate Email Notifications for Build Events
 
 ## Objective
 
@@ -87,6 +87,8 @@ Expected:
 ```text
 Email Sent Successfully
 ```
+<img width="1366" height="603" alt="image" src="https://github.com/user-attachments/assets/67f8fef1-9e41-40a7-a295-516887b6f6a5" />
+<img width="1366" height="501" alt="image" src="https://github.com/user-attachments/assets/d6c3a48c-fe8f-413f-8293-b020e4598aaa" />
 
 ---
 
@@ -140,6 +142,8 @@ pipeline {
     }
 }
 ```
+<img width="1363" height="617" alt="image" src="https://github.com/user-attachments/assets/114a9e26-631a-4a7e-a025-fa50ad82adad" />
+<img width="1366" height="550" alt="image" src="https://github.com/user-attachments/assets/080ce185-bd53-44fe-8d12-7584a5f21d1c" />
 
 ---
 
@@ -216,6 +220,9 @@ Email:
 ```text
 Received Successfully
 ```
+<img width="1366" height="521" alt="image" src="https://github.com/user-attachments/assets/94934701-f419-41ac-b34c-da095da20b43" />
+<img width="1366" height="520" alt="image" src="https://github.com/user-attachments/assets/35d5db26-e800-48ce-99d9-c4c04d979d3c" />
+<img width="1366" height="441" alt="image" src="https://github.com/user-attachments/assets/488bfc87-60dd-4086-b0f6-fd92835a6f3c" />
 
 ---
 
