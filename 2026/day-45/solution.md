@@ -143,6 +143,7 @@ pipeline {
     }
 }
 ```
+<img width="1366" height="616" alt="image" src="https://github.com/user-attachments/assets/6bb9ae5b-b361-43d9-a51c-df3dd4241e04" />
 
 ---
 
@@ -172,6 +173,8 @@ Scan only critical and high issues
 --exit-code 1
 Fail pipeline if vulnerabilities found
 ```
+<img width="1365" height="685" alt="image" src="https://github.com/user-attachments/assets/e52d9a7f-6702-493d-ac86-c6186f043b0f" />
+<img width="1366" height="668" alt="image" src="https://github.com/user-attachments/assets/82ddc5e0-fcd6-46ea-aff7-74902d0fa419" />
 
 ---
 
@@ -284,6 +287,8 @@ Installed Version : 1.1.1
 
 Fixed Version : 1.1.1w
 ```
+<img width="1366" height="603" alt="image" src="https://github.com/user-attachments/assets/168ac54b-98ff-4fac-8c58-6f82299f96a5" />
+<img width="1366" height="239" alt="image" src="https://github.com/user-attachments/assets/5d429c1b-3f73-401a-acfa-2c8114222512" />
 
 ---
 
