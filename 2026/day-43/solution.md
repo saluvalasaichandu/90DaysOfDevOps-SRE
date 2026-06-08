@@ -40,6 +40,7 @@ Install the following Jenkins Plugin:
 ```text
 Role-Based Authorization Strategy
 ```
+<img width="1366" height="684" alt="image" src="https://github.com/user-attachments/assets/27209ba2-53f3-4759-932a-b370e88848fd" />
 
 Navigate:
 
@@ -288,6 +289,7 @@ Result:
 ```text
 Success
 ```
+<img width="1363" height="724" alt="image" src="https://github.com/user-attachments/assets/af2616ec-9398-44fd-be72-a533e209cffe" />
 
 ---
 
