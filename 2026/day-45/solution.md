@@ -57,18 +57,21 @@ security vulnerabilities.
 curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
 
 ```
+<img width="1366" height="725" alt="image" src="https://github.com/user-attachments/assets/29e39121-972f-44a1-8ea9-153ef38cd823" />
 
 Verify:
 
 ```bash
 trivy --version
 ```
+<img width="1366" height="724" alt="image" src="https://github.com/user-attachments/assets/0ed8f451-665f-4b1e-ad45-5e8f1e753e17" />
 
 Expected:
 
 ```text
 Version: 0.xx.x
 ```
+<img width="1366" height="730" alt="image" src="https://github.com/user-attachments/assets/c9714b72-76f9-434f-983f-8216ac67599c" />
 
 ---
 
@@ -92,6 +95,7 @@ Output:
 REPOSITORY            TAG
 saichandu/sample-app  v1.0
 ```
+<img width="1366" height="263" alt="image" src="https://github.com/user-attachments/assets/d59c8487-9e8b-4847-bfa2-cc2147424a4c" />
 
 ---
 
