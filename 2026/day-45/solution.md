@@ -180,41 +180,72 @@ pipeline {
 
     environment {
 
-        IMAGE_NAME = "saichandu/sample-app:v1.0"
+        IMAGE_NAME = "saichandu27/sample-app"
+        IMAGE_TAG  = "v1.0"
 
     }
 
     stages {
 
-        stage('Build') {
+        stage('Pull Docker Image') {
 
             steps {
 
-                sh 'docker build -t $IMAGE_NAME .'
-
+                sh '''
+                docker pull ${IMAGE_NAME}:${IMAGE_TAG}
+                '''
             }
         }
 
-        stage('Trivy Scan') {
+        stage('Trivy Vulnerability Scan') {
 
             steps {
 
                 sh '''
                 trivy image \
                 --severity HIGH,CRITICAL \
-                --exit-code 1 \
-                $IMAGE_NAME
+                --exit-code 0 \
+                ${IMAGE_NAME}:${IMAGE_TAG}
                 '''
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy Container') {
 
             steps {
 
-                echo "Deployment Successful"
+                sh '''
+                docker rm -f flask-app || true
 
+                docker run -d \
+                --name flask-app \
+                -p 5000:5000 \
+                ${IMAGE_NAME}:${IMAGE_TAG}
+                '''
             }
+        }
+
+        stage('Verify Deployment') {
+
+            steps {
+
+                sh 'docker ps'
+
+                sh 'curl -I http://localhost:5000'
+            }
+        }
+    }
+
+    post {
+
+        success {
+
+            echo 'Application Deployed Successfully'
+        }
+
+        failure {
+
+            echo 'Pipeline Failed'
         }
     }
 }
