@@ -21,6 +21,7 @@ Jenkins
 
 Pipeline Jobs
 ```
+<img width="1365" height="486" alt="image" src="https://github.com/user-attachments/assets/649bfd77-29ba-4b19-82e8-a36b03f9ed19" />
 
 ---
 
@@ -76,6 +77,9 @@ jenkins-shared-library
 │   ├── testApp.groovy
 │   └── deployApp.groovy
 ```
+<img width="1356" height="603" alt="image" src="https://github.com/user-attachments/assets/020b98a5-75d7-493b-a2ea-0669c3d90ac3" />
+<img width="1366" height="617" alt="image" src="https://github.com/user-attachments/assets/d95ec75e-8a06-4cd8-a52b-03aa691035fa" />
+
 
 ---
 
@@ -196,6 +200,7 @@ pipeline {
     }
 }
 ```
+<img width="1364" height="613" alt="image" src="https://github.com/user-attachments/assets/76cab346-a8c0-4dfc-b3b4-d4844746f4d7" />
 
 ---
 
@@ -214,6 +219,7 @@ Deploy Stage
 
 Deploying Application...
 ```
+<img width="1366" height="555" alt="image" src="https://github.com/user-attachments/assets/8628bf88-e0a0-44d0-a167-fcca99ce6472" />
 
 ---
 
