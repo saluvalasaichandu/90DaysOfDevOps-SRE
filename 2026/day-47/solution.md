@@ -103,19 +103,19 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building Application'
+                echo "Building Application..."
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running Tests'
+                echo "Testing Application..."
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying Application'
+                echo "Deploying Application..."
             }
         }
     }
@@ -123,36 +123,18 @@ pipeline {
     post {
 
         success {
-
             emailext(
-                subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: """
-Build Successful
-
-Job: ${env.JOB_NAME}
-Build: ${env.BUILD_NUMBER}
-
-URL:
-${env.BUILD_URL}
-""",
-                to: 'sai@gmail.com'
+                subject: "Build Success",
+                body: "Pipeline executed successfully.\nBuild URL: ${BUILD_URL}",
+                to: "your-email@gmail.com"
             )
         }
 
         failure {
-
             emailext(
-                subject: "FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: """
-Build Failed
-
-Job: ${env.JOB_NAME}
-Build: ${env.BUILD_NUMBER}
-
-Check Logs:
-${env.BUILD_URL}
-""",
-                to: 'sai@gmail.com'
+                subject: "Build Failed",
+                body: "Pipeline execution failed.\nCheck: ${BUILD_URL}",
+                to: "your-email@gmail.com"
             )
         }
     }
