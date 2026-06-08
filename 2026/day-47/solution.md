@@ -126,7 +126,7 @@ pipeline {
             emailext(
                 subject: "Build Success",
                 body: "Pipeline executed successfully.\nBuild URL: ${BUILD_URL}",
-                to: "your-email@gmail.com"
+                to: "sai@gmail.com"
             )
         }
 
@@ -134,7 +134,7 @@ pipeline {
             emailext(
                 subject: "Build Failed",
                 body: "Pipeline execution failed.\nCheck: ${BUILD_URL}",
-                to: "your-email@gmail.com"
+                to: "sai@gmail.com"
             )
         }
     }
