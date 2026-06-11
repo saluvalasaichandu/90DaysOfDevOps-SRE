@@ -111,6 +111,7 @@ minikube start
 kubectl cluster-info
 kubectl get nodes
 ```
+<img width="1237" height="539" alt="image" src="https://github.com/user-attachments/assets/a50d8585-355c-4d71-a634-3e9f7a58bcfa" />
 
 Write down: Which one did you choose and why?
 
