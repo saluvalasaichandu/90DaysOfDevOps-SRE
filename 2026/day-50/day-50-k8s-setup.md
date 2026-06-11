@@ -459,6 +459,7 @@ Installing StorageClass
 
 Set kubectl context
 ```
+<img width="1366" height="659" alt="image" src="https://github.com/user-attachments/assets/771e9858-c02d-4580-a6b1-3012615c0095" />
 
 ---
 
@@ -484,6 +485,7 @@ Example:
 NAME                            STATUS   ROLES
 devops-cluster-control-plane    Ready    control-plane
 ```
+<img width="1366" height="710" alt="image" src="https://github.com/user-attachments/assets/4eed1ed9-6b40-4c94-b457-1b28c97a6790" />
 
 ---
 
