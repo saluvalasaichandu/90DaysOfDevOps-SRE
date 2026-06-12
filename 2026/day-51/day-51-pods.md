@@ -243,6 +243,7 @@ kubectl run test-pod \
 --image=nginx \
 --dry-run=client -o yaml > test-pod.yaml
 ```
+<img width="900" height="353" alt="image" src="https://github.com/user-attachments/assets/9b2d504d-1922-4e52-ab54-a5a0a1610345" />
 
 ---
 
@@ -372,6 +373,7 @@ Verify:
 ```bash
 kubectl get pods
 ```
+<img width="979" height="277" alt="image" src="https://github.com/user-attachments/assets/7dee4229-7283-456d-9037-898bd13d922b" />
 
 ---
 
