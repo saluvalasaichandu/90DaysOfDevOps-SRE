@@ -141,6 +141,7 @@ Expected:
 ```text
 Hello from BusyBox
 ```
+<img width="986" height="384" alt="image" src="https://github.com/user-attachments/assets/9bb678c8-6d41-4a3e-8d1b-ae752c81c01a" />
 
 ### Why command is required?
 
