@@ -80,6 +80,7 @@ kubectl apply -f nginx-pod.yaml
 kubectl get pods
 kubectl get pods -o wide
 ```
+<img width="913" height="725" alt="image" src="https://github.com/user-attachments/assets/23940d38-d7fe-44d8-9f4e-3f4369a344cd" />
 
 ## Inspect Pod
 
