@@ -193,6 +193,7 @@ Access:
 ```bash
 http://<NodeIP>:30080
 ```
+<img width="1004" height="403" alt="image" src="https://github.com/user-attachments/assets/34a255a0-e889-405f-b4e7-472549dfb3ea" />
 
 ---
 
