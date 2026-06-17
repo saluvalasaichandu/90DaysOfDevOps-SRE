@@ -59,6 +59,7 @@ Verify:
 ```bash
 kubectl get ns
 ```
+<img width="1168" height="339" alt="image" src="https://github.com/user-attachments/assets/3aa43c22-1ec6-41f3-8cf5-a2a92aca0cb9" />
 
 ---
 
