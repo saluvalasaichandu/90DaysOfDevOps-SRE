@@ -203,6 +203,7 @@ Expected:
 NAME               READY   UP-TO-DATE   AVAILABLE
 nginx-deployment   3/3     3            3
 ```
+<img width="1366" height="715" alt="image" src="https://github.com/user-attachments/assets/f82dfb2a-2019-44d0-8998-b656d460275e" />
 
 ---
 
