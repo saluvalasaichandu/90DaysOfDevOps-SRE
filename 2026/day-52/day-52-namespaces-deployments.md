@@ -365,6 +365,7 @@ Old Pods Removed One By One
 
 New Pods Created One By One
 ```
+<img width="1251" height="484" alt="image" src="https://github.com/user-attachments/assets/ce68b0c9-8690-4b90-b8a8-7f9844119076" />
 
 Zero Downtime Deployment.
 
@@ -444,7 +445,6 @@ kubectl get deployments -A
 kubectl get deployments -A
 ```
 
-📸 Add Screenshot Here
 
 ---
 
@@ -453,8 +453,8 @@ kubectl get deployments -A
 ```bash
 kubectl get pods -A
 ```
+<img width="1366" height="561" alt="image" src="https://github.com/user-attachments/assets/1048e255-10a0-4662-adba-a38b6fecc670" />
 
-📸 Add Screenshot Here
 
 ---
 
