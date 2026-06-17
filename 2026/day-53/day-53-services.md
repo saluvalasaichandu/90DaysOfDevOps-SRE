@@ -116,6 +116,7 @@ kubectl apply -f app-deployment.yaml
 
 kubectl get pods -o wide
 ```
+<img width="1366" height="617" alt="image" src="https://github.com/user-attachments/assets/6fb96dbc-be71-4183-8e12-0c5aad14b816" />
 
 ---
 
