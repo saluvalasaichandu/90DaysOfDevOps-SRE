@@ -234,6 +234,7 @@ Minikube:
 ```bash
 minikube tunnel
 ```
+<img width="928" height="407" alt="image" src="https://github.com/user-attachments/assets/aa549704-23f9-49a8-ae6d-bb27aa0f749b" />
 
 ---
 
