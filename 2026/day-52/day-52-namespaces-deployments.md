@@ -316,6 +316,7 @@ Scale Down
 
 Extra Pods Terminated
 ```
+<img width="975" height="434" alt="image" src="https://github.com/user-attachments/assets/15a1aa24-f53a-4ddb-b4fc-70ce32e9eca3" />
 
 ---
 
