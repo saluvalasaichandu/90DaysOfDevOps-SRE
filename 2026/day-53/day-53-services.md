@@ -145,6 +145,7 @@ kubectl apply -f clusterip-service.yaml
 
 kubectl get svc
 ```
+<img width="969" height="368" alt="image" src="https://github.com/user-attachments/assets/07debf25-ac95-4e81-ad8d-1b8de4759f79" />
 
 Test:
 
@@ -156,6 +157,7 @@ kubectl run test-client \
 
 wget -qO- http://web-app-clusterip
 ```
+<img width="1366" height="629" alt="image" src="https://github.com/user-attachments/assets/e50a56fe-d3b4-4bee-8500-4823a6b6a0bb" />
 
 ---
 
