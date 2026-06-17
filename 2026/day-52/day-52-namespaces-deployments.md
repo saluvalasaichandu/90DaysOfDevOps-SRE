@@ -234,6 +234,7 @@ ReplicaSet
      ↓
 Pods
 ```
+<img width="1365" height="297" alt="image" src="https://github.com/user-attachments/assets/6cb826f2-8d16-485b-8209-8870dc851883" />
 
 ---
 
