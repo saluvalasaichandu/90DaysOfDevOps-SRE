@@ -264,6 +264,7 @@ data:
   DB_USER: YWRtaW4=
   DB_PASSWORD: czNjdXJlUEBzc3cwcmQ=
 ```
+<img width="1099" height="416" alt="image" src="https://github.com/user-attachments/assets/d7b54231-0a25-4a42-a4ae-bb2b84a82991" />
 
 ---
 
@@ -391,6 +392,7 @@ Inside Secret YAML = Base64
 
 Inside Pod Volume = Plain Text
 ```
+<img width="1098" height="261" alt="image" src="https://github.com/user-attachments/assets/6d611305-e8cd-4972-a778-c627bcd8cd5c" />
 
 ---
 
