@@ -1,4 +1,4 @@
-# Day 55 – Kubernetes Persistent Volumes (PV) & Persistent Volume Claims (PVC)
+<img width="1366" height="426" alt="image" src="https://github.com/user-attachments/assets/824632e8-131d-4cf6-b3f8-3fe88e28b5b9" /># Day 55 – Kubernetes Persistent Volumes (PV) & Persistent Volume Claims (PVC)
 
 ## Objective
 
@@ -148,6 +148,7 @@ Status:
 ```text
 Bound ✅
 ```
+<img width="1366" height="426" alt="image" src="https://github.com/user-attachments/assets/eb42cc42-ef02-4d2a-b588-0e7ec7fbd8b3" />
 
 ---
 
