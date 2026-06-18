@@ -180,6 +180,7 @@ Result:
 ```text
 Data Still Exists ✅
 ```
+<img width="1022" height="297" alt="image" src="https://github.com/user-attachments/assets/3fd28990-7acc-4883-a17d-74a0f1c6e561" />
 
 ---
 
