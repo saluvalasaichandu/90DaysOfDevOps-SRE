@@ -195,6 +195,7 @@ APP_ENV=production
 APP_DEBUG=false
 APP_PORT=8080
 ```
+<img width="1366" height="721" alt="image" src="https://github.com/user-attachments/assets/dd01fe07-60b8-42cc-ba3d-6737fdbe2747" />
 
 ---
 
