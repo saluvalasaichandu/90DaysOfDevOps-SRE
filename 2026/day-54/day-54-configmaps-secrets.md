@@ -102,6 +102,7 @@ data:
   APP_DEBUG: "false"
   APP_PORT: "8080"
 ```
+<img width="1366" height="723" alt="image" src="https://github.com/user-attachments/assets/7cb862cc-081c-4779-901d-3dff6c9cd608" />
 
 ---
 
