@@ -77,6 +77,8 @@ Requests
 Limits
 QoS Class
 ```
+<img width="1366" height="726" alt="image" src="https://github.com/user-attachments/assets/7842977f-d84a-4633-b40f-d449930f899d" />
+<img width="1366" height="723" alt="image" src="https://github.com/user-attachments/assets/538bd0bd-ed05-48f1-a0a9-4d5233348056" />
 
 ---
 
