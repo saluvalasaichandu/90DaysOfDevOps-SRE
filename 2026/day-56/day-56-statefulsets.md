@@ -205,6 +205,7 @@ Persistent Data
 ```
 
 Data survives because the same PVC is reattached ✅
+<img width="884" height="165" alt="image" src="https://github.com/user-attachments/assets/20b8a873-bcf0-4ec1-a013-7da9bc283dc4" />
 
 ---
 
