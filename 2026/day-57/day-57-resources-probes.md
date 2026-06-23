@@ -191,6 +191,7 @@ Result:
 ```text
 Container Restarted
 ```
+<img width="1366" height="637" alt="image" src="https://github.com/user-attachments/assets/92cff5ee-bd52-4de9-a5f4-761a8d4e95eb" />
 
 ---
 
