@@ -238,6 +238,7 @@ web-3
 ```
 
 PVCs remain intact ✅
+<img width="874" height="436" alt="image" src="https://github.com/user-attachments/assets/6b3dcc3a-cd5f-47f0-b228-e666750bd4bf" />
 
 ---
 
