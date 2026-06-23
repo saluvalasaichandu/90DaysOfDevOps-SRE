@@ -108,6 +108,9 @@ Deploy:
 kubectl apply -f stress-pod.yaml
 kubectl describe pod stress-pod
 ```
+<img width="1366" height="724" alt="image" src="https://github.com/user-attachments/assets/98670db6-0786-4e12-9ebb-248e9d130dfe" />
+<img width="1366" height="726" alt="image" src="https://github.com/user-attachments/assets/3da30846-3606-4138-83b9-42d63eb2b467" />
+<img width="1366" height="722" alt="image" src="https://github.com/user-attachments/assets/04f88eb3-76d4-4ef3-81ce-e72a49651f99" />
 
 Output:
 
