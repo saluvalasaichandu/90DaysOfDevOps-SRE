@@ -289,6 +289,7 @@ kubectl get events
 kubectl get endpoints
 kubectl delete pod <pod>
 ```
+<img width="829" height="721" alt="image" src="https://github.com/user-attachments/assets/e0e041e5-11b9-476e-9d1c-6bf2470c5273" />
 
 ---
 
