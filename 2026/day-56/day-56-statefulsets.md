@@ -52,6 +52,7 @@ nginx-abc123
 nginx-def456
 nginx-xyz789
 ```
+<img width="937" height="180" alt="image" src="https://github.com/user-attachments/assets/fc32aad2-5944-427b-85c3-86bd414c76bf" />
 
 Pod names change after recreation ❌
 
