@@ -85,6 +85,7 @@ Output:
 ```text
 CLUSTER-IP: None
 ```
+<img width="879" height="362" alt="image" src="https://github.com/user-attachments/assets/2040a6ea-63bc-4bd0-9471-9dc21d6e49f1" />
 
 ---
 
