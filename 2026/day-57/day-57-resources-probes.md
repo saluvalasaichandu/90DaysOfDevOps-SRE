@@ -231,6 +231,8 @@ Result:
 Pod Removed From Endpoints
 Container Still Running
 ```
+<img width="776" height="383" alt="image" src="https://github.com/user-attachments/assets/fd9c2a43-e2d9-45ed-82bc-f027615b040d" />
+
 
 ---
 
