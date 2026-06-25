@@ -258,6 +258,7 @@ Verify:
 ```bash
 kubectl describe hpa php-apache
 ```
+<img width="1366" height="725" alt="image" src="https://github.com/user-attachments/assets/9e236e58-c4e8-43fe-b0f1-92f32bb2ec26" />
 
 ---
 
