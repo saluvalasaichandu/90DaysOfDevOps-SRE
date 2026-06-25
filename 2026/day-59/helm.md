@@ -216,6 +216,7 @@ Check Environment
 ```bash
 helm env
 ```
+<img width="1366" height="652" alt="image" src="https://github.com/user-attachments/assets/83aedb01-0195-44b9-9fdf-860cca51585d" />
 
 ---
 
@@ -246,6 +247,7 @@ NAME        URL
 
 bitnami     https://charts.bitnami.com/bitnami
 ```
+<img width="989" height="229" alt="image" src="https://github.com/user-attachments/assets/00f2b405-cbfb-4d10-ae40-b875e91819fd" />
 
 ---
 
@@ -290,6 +292,7 @@ NAME
 
 my-nginx
 ```
+<img width="1366" height="128" alt="image" src="https://github.com/user-attachments/assets/cfb94ece-c8f8-4393-8e11-f51d260ba775" />
 
 ---
 
@@ -360,6 +363,7 @@ Expected
 
 Service = NodePort
 ```
+<img width="1366" height="730" alt="image" src="https://github.com/user-attachments/assets/38ed30c6-3cc1-4b15-960e-379bfd1e744b" />
 
 ---
 
