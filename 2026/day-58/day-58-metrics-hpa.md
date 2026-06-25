@@ -1,4 +1,4 @@
-# 🚀 Day 58 - Kubernetes Metrics Server & Horizontal Pod Autoscaler (HPA)
+<img width="1366" height="712" alt="image" src="https://github.com/user-attachments/assets/fe62800e-906d-4e46-8ef7-ef54b3e4039c" /># 🚀 Day 58 - Kubernetes Metrics Server & Horizontal Pod Autoscaler (HPA)
 
 ## 📌 Objective
 
@@ -148,6 +148,7 @@ Verify:
 kubectl get pods
 kubectl get svc
 ```
+<img width="799" height="723" alt="image" src="https://github.com/user-attachments/assets/14f7d43f-880a-419f-9f23-a4e9602c77bb" />
 
 ---
 
@@ -173,6 +174,7 @@ Expected:
 ```text
 TARGETS 0%/50%
 ```
+<img width="1366" height="712" alt="image" src="https://github.com/user-attachments/assets/b9fb9105-8107-4792-bff2-f570de74966b" />
 
 ---
 
@@ -207,6 +209,7 @@ Expected:
  ↓
 5 Pods
 ```
+<img width="1075" height="519" alt="image" src="https://github.com/user-attachments/assets/0a5ad76c-360f-4293-adcf-0f52f6b6264d" />
 
 ---
 
