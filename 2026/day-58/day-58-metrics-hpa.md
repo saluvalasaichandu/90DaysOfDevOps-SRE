@@ -97,6 +97,7 @@ kubectl top nodes
 
 kubectl top pods -A
 ```
+<img width="1366" height="502" alt="image" src="https://github.com/user-attachments/assets/6ebfeb3b-e154-48d7-9d36-2a81ca2f976c" />
 
 ---
 
