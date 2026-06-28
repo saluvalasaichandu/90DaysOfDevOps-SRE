@@ -1,6 +1,3 @@
-# Day 60 – Kubernetes Capstone Project (Part 1/3)
-
-````markdown
 # 🚀 Day 60 - Kubernetes Capstone Project
 # Deploy WordPress + MySQL on Kubernetes
 
