@@ -57,6 +57,7 @@ sudo apt update && sudo apt install terraform
 ```bash
 terraform -version
 ```
+<img width="1366" height="733" alt="611" src="https://github.com/user-attachments/assets/ca5347c5-e6db-4705-9e3e-66ef22e34ca1" />
 
 ### Install and configure AWS CLI
 ```bash
@@ -69,6 +70,7 @@ aws configure
 aws sts get-caller-identity
 ```
 This returns the AWS Account ID, User ARN, and User ID — confirming Terraform will be able to authenticate against the correct AWS account.
+<img width="1366" height="727" alt="612" src="https://github.com/user-attachments/assets/96bede9f-6e70-4f2b-be94-376293e449e3" />
 
 ---
 
@@ -114,6 +116,8 @@ It downloaded the **AWS provider plugin** — the piece of code that knows how t
 - `.terraform.lock.hcl` — a lock file pinning exact provider versions, so everyone on the team uses the same version
 
 Verified in the AWS S3 console that the bucket was successfully created.
+<img width="1366" height="731" alt="613" src="https://github.com/user-attachments/assets/706150c4-878f-44be-9b60-68edf49402ca" />
+<img width="1366" height="483" alt="614" src="https://github.com/user-attachments/assets/07f47fb5-56cd-4457-bd4c-ea28a9f2d533" />
 
 ---
 
@@ -141,6 +145,7 @@ terraform apply
 Terraform compares the resources defined in the `.tf` files against what's recorded in the **state file** (`terraform.tfstate`). Since the S3 bucket is already recorded there as created, Terraform skips it during `plan`/`apply` and only provisions the new `aws_instance` resource that isn't in the state yet.
 
 Verified in the AWS EC2 console that the instance was running with the tag `Name = TerraWeek-Day1`.
+<img width="1364" height="719" alt="615" src="https://github.com/user-attachments/assets/58429f6a-624c-4eea-b401-5992924a53a2" />
 
 <img width="1366" height="299" alt="image" src="https://github.com/user-attachments/assets/ee82118d-3622-4b50-acc3-533ee941f118" />
 
