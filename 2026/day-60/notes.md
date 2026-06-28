@@ -431,6 +431,7 @@ mysql-storage-mysql-0
 
 Bound
 ```
+<img width="1366" height="318" alt="image" src="https://github.com/user-attachments/assets/eccf3fc7-2c95-47a4-b7b8-bbb997de79b3" />
 
 ---
 
@@ -514,6 +515,7 @@ kubectl get configmap
 
 kubectl describe configmap wordpress-config
 ```
+<img width="1366" height="726" alt="image" src="https://github.com/user-attachments/assets/1cf8e9db-d1b8-4652-9f04-1a5e22411724" />
 
 ---
 
