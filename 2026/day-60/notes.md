@@ -178,6 +178,7 @@ Verify
 ```bash
 kubectl config view --minify
 ```
+<img width="1366" height="728" alt="image" src="https://github.com/user-attachments/assets/8c28befc-11b7-4f06-bc71-b2a4fd7fb3ac" />
 
 ---
 
@@ -231,6 +232,7 @@ Expected
 ```
 mysql-secret
 ```
+<img width="1366" height="726" alt="image" src="https://github.com/user-attachments/assets/b63688bf-13ce-4218-82a3-8b161adc790f" />
 
 ---
 
@@ -298,6 +300,7 @@ NAME      TYPE       CLUSTER-IP
 
 mysql     ClusterIP  None
 ```
+<img width="1366" height="505" alt="image" src="https://github.com/user-attachments/assets/d2e06fcc-e198-47b3-aa8d-1d5efcf04704" />
 
 ---
 
