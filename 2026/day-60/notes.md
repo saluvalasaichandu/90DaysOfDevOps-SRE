@@ -756,6 +756,9 @@ Click
 ```
 Install WordPress
 ```
+<img width="1366" height="277" alt="image" src="https://github.com/user-attachments/assets/7b5ad1cd-4f57-455d-81d7-117b3d91be85" />
+<img width="1366" height="683" alt="image" src="https://github.com/user-attachments/assets/cb1bedf8-1f69-4bf4-9b38-0b71d375ebd3" />
+<img width="1365" height="685" alt="image" src="https://github.com/user-attachments/assets/0d898b7c-8ad2-421d-8611-e857dcae0184" />
 
 ---
 
