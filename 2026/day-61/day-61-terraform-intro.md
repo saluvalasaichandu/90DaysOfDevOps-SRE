@@ -142,6 +142,8 @@ Terraform compares the resources defined in the `.tf` files against what's recor
 
 Verified in the AWS EC2 console that the instance was running with the tag `Name = TerraWeek-Day1`.
 
+<img width="1366" height="299" alt="image" src="https://github.com/user-attachments/assets/ee82118d-3622-4b50-acc3-533ee941f118" />
+
 ---
 
 ## Task 5: Understanding the State File
