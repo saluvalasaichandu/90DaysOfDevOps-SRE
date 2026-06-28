@@ -650,6 +650,7 @@ Describe Pod
 ```bash
 kubectl describe pod <wordpress-pod>
 ```
+<img width="987" height="501" alt="image" src="https://github.com/user-attachments/assets/1a667bae-2a6c-4766-929b-6fad71bcecd7" />
 
 ---
 
@@ -707,6 +708,7 @@ NodePort
 
 80:30080/TCP
 ```
+<img width="846" height="208" alt="image" src="https://github.com/user-attachments/assets/c6ea2d3b-adde-4a95-b1e2-2730d53cde1b" />
 
 ---
 
