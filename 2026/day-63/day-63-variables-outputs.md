@@ -1,4 +1,4 @@
-# 🚀 Day 63 – Terraform Variables, Outputs, Data Sources & Expressions
+<img width="1366" height="283" alt="image" src="https://github.com/user-attachments/assets/5eccc907-5ea2-47d8-9fe1-431a7289a14c" /># 🚀 Day 63 – Terraform Variables, Outputs, Data Sources & Expressions
 
 > **90 Days of DevOps | TerraWeek - Day 63**
 
@@ -342,6 +342,7 @@ terraform output public_ip
 
 terraform output -json
 ```
+<img width="1366" height="731" alt="image" src="https://github.com/user-attachments/assets/ead49e9d-6706-4fa9-b990-bd43a87fbc97" />
 
 ---
 
@@ -362,6 +363,9 @@ lookup({dev="t2.micro",prod="t3.small"},"prod")
 
 cidrsubnet("10.0.0.0/16",8,1)
 ```
+<img width="1366" height="283" alt="image" src="https://github.com/user-attachments/assets/73099b04-ab18-4817-8279-a14ccb2ea6f4" />
+<img width="1366" height="474" alt="image" src="https://github.com/user-attachments/assets/e5a711db-ae87-4f7b-b4f1-ba4f08531a2e" />
+<img width="1366" height="353" alt="image" src="https://github.com/user-attachments/assets/e5610ff5-adc2-42d6-994b-901a04162845" />
 
 ---
 
