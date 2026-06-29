@@ -1,4 +1,4 @@
-<img width="1366" height="283" alt="image" src="https://github.com/user-attachments/assets/5eccc907-5ea2-47d8-9fe1-431a7289a14c" /># 🚀 Day 63 – Terraform Variables, Outputs, Data Sources & Expressions
+# 🚀 Day 63 – Terraform Variables, Outputs, Data Sources & Expressions
 
 > **90 Days of DevOps | TerraWeek - Day 63**
 
