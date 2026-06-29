@@ -293,17 +293,6 @@ Confirmed with `yes`. Terraform destroyed resources in **reverse dependency orde
 | **Explicit** | Manually declared using `depends_on`, used when there's no direct attribute reference | S3 logs bucket → EC2 instance |
 
 Terraform builds a full **dependency graph** behind the scenes from both types and uses it to decide the correct creation order (and the exact reverse order for destruction).
-
----
-
-## 📸 Screenshots
-- ✅ `terraform apply` output showing all resources created
-- ✅ AWS VPC console showing VPC, subnet, IGW, route table all linked
-- ✅ EC2 instance with public IP and correct security group
-- ✅ Dependency graph (`graph.png` or Graphviz visual)
-
-*(Insert screenshots here)*
-
 ---
 
 ## 🪜 .gitignore additions
