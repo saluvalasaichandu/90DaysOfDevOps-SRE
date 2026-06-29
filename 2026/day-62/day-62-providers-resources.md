@@ -105,6 +105,7 @@ resource "aws_route_table_association" "public_assoc" {
   route_table_id = aws_route_table.public_rt.id
 }
 ```
+<img width="1366" height="602" alt="image" src="https://github.com/user-attachments/assets/ab47e84f-c3c1-41da-8405-1eb82497a06b" />
 
 ### Plan and apply
 ```bash
@@ -133,6 +134,9 @@ It's not actually possible to "try" this in Terraform directly, since Terraform 
 | `aws_internet_gateway.igw` | `aws_vpc.main` | `vpc_id = aws_vpc.main.id` |
 | `aws_route_table.public_rt` | `aws_vpc.main`, `aws_internet_gateway.igw` | `vpc_id` + `gateway_id` in route block |
 | `aws_route_table_association.public_assoc` | `aws_subnet.public`, `aws_route_table.public_rt` | `subnet_id` + `route_table_id` |
+
+<img width="1366" height="728" alt="image" src="https://github.com/user-attachments/assets/ee0bba60-1b76-40cf-a46c-771b6ed0736e" />
+
 
 ---
 
@@ -172,7 +176,10 @@ resource "aws_security_group" "web_sg" {
     Name = "TerraWeek-SG"
   }
 }
+
+
 ```
+<img width="1366" height="607" alt="image" src="https://github.com/user-attachments/assets/05da89b2-2125-432f-ba62-20c76b40f31e" />
 
 ### EC2 Instance
 ```hcl
@@ -193,6 +200,7 @@ resource "aws_instance" "main" {
 terraform plan
 terraform apply
 ```
+<img width="1366" height="577" alt="image" src="https://github.com/user-attachments/assets/9bedf6f4-a99f-4519-a04e-c7265c9545bb" />
 
 ### ✅ Verification
 The EC2 instance launched with a public IP and was reachable on SSH (port 22) — confirming the security group, subnet, route table, and internet gateway were all correctly wired together.
