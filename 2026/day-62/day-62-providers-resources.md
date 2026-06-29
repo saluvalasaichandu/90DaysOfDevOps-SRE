@@ -111,6 +111,7 @@ resource "aws_route_table_association" "public_assoc" {
 terraform plan      # Shows: 5 to add
 terraform apply
 ```
+<img width="1366" height="728" alt="image" src="https://github.com/user-attachments/assets/2516e059-ff84-4301-9d96-5809798b935b" />
 
 ### ✅ Verification
 Checked the AWS VPC console — all 5 resources (VPC, subnet, IGW, route table, association) appeared correctly linked: the subnet sat inside the VPC, the route table's default route pointed to the IGW, and the association tied the route table to the subnet.
