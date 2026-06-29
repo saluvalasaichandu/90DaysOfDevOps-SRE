@@ -227,6 +227,10 @@ Even though nothing in the bucket's arguments *references* the EC2 instance, `de
 ```bash
 terraform plan
 ```
+<img width="1366" height="729" alt="image" src="https://github.com/user-attachments/assets/972db1d8-b200-43b8-a128-66b318f22995" />
+<img width="1366" height="722" alt="image" src="https://github.com/user-attachments/assets/e2c8b673-7b7d-45c6-8725-d09375a1a307" />
+
+
 The plan output confirmed the bucket would be created **after** the EC2 instance, respecting the explicit dependency.
 
 ### Visualizing the dependency graph
