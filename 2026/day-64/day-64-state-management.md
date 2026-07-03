@@ -207,6 +207,8 @@ terraform plan
 ╵
 ```
 
+<img width="1020" height="448" alt="image" src="https://github.com/user-attachments/assets/c54ea743-45ea-4be2-b07e-cce25f5927df" />
+
 ### Why is locking critical for team environments?
 Without locking, two developers running `terraform apply` simultaneously could:
 - **Interleave writes** to the state file, corrupting it beyond recovery
@@ -261,6 +263,8 @@ Import successful!
 The resources that were imported are shown above. These resources are now in
 your Terraform state and will henceforth be managed by Terraform.
 ```
+
+<img width="1366" height="729" alt="image" src="https://github.com/user-attachments/assets/73b194af-b492-43d6-a163-ed02a9157701" />
 
 ### Step 4: Verify
 ```bash
