@@ -26,6 +26,9 @@ terraform show
 terraform state list
 # Lists all resource addresses currently tracked
 ```
+<img width="1366" height="732" alt="image" src="https://github.com/user-attachments/assets/fce05f82-c50a-42be-8289-8fb1a0aa07bb" />
+<img width="1366" height="730" alt="image" src="https://github.com/user-attachments/assets/44117071-102e-4bc5-b825-bc14cc34315f" />
+
 
 **Output of `terraform state list`:**
 ```
@@ -46,6 +49,9 @@ terraform state show aws_instance.my_ec2
 terraform state show aws_vpc.my_vpc
 # Shows every attribute AWS stored for the VPC
 ```
+
+<img width="1017" height="495" alt="image" src="https://github.com/user-attachments/assets/22f21dde-e42f-4efe-a453-d60a770b67b3" />
+
 
 ### Q1: How many resources does Terraform track?
 **8 resources** — `aws_vpc`, `aws_subnet`, `aws_internet_gateway`, `aws_route_table`, `aws_route_table_association`, `aws_security_group`, `aws_instance`, `aws_s3_bucket`.
@@ -421,18 +427,6 @@ LOCAL STATE (Day 61-63)                   REMOTE STATE (Day 64+)
                                    │    writes)              │
                                    └─────────────────────────┘
 ```
-
----
-
-## 📸 Screenshots
-- ✅ `terraform state list` output
-- ✅ `terraform.tfstate` in the S3 bucket (`dev/terraform.tfstate`)
-- ✅ DynamoDB table showing `LockID` entry during apply
-- ✅ Lock error in Terminal 2 during concurrent run
-- ✅ `terraform import` success output
-- ✅ `terraform plan` showing drift (tag change) and after reconciliation
-
-*(Insert screenshots here)*
 
 ---
 
