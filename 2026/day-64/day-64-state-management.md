@@ -117,6 +117,8 @@ aws dynamodb create-table \
   --region us-east-1
 ```
 
+<img width="1017" height="487" alt="image" src="https://github.com/user-attachments/assets/64471506-d1c2-41f2-8a10-13be22588f98" />
+
 > **Why DynamoDB?** The locking mechanism works by writing a `LockID` item to DynamoDB at the start of every Terraform operation and deleting it at the end. If a second operation starts and finds that item already exists, it errors out instead of proceeding — preventing two people from corrupting the state simultaneously.
 
 ### Step 2: Add backend block to `providers.tf`
@@ -163,7 +165,12 @@ terraform plan
 # Output: No changes. Infrastructure is up-to-date.
 ```
 
+<img width="1033" height="727" alt="image" src="https://github.com/user-attachments/assets/63a3e608-0f62-43e5-9181-ec0ac05ece57" />
+
+<img width="1366" height="606" alt="image" src="https://github.com/user-attachments/assets/064abbe6-55b7-4b69-86d8-cd3c8bdd5250" />
+
 ✅ The local `terraform.tfstate` is now empty (or replaced by a pointer). All state lives in S3.
+
 
 ---
 
