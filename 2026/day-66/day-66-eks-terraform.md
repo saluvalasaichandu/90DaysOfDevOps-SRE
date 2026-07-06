@@ -377,6 +377,14 @@ Welcome to nginx!
 ```
 <img width="1366" height="730" alt="image" src="https://github.com/user-attachments/assets/9e47da91-5265-44ef-8915-9fc1dd45ffb6" />
 
+<img width="1366" height="727" alt="image" src="https://github.com/user-attachments/assets/c753af68-7163-4109-823d-0ab3ca6728e3" />
+
+
+<img width="1366" height="433" alt="image" src="https://github.com/user-attachments/assets/0913f007-76cb-4e81-bb21-dc3bda68d688" />
+
+<img width="1366" height="611" alt="image" src="https://github.com/user-attachments/assets/5956caa7-9b63-49f9-909d-8a05fb88f5d8" />
+
+
 
 ---
 
