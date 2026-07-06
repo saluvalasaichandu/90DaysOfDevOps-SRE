@@ -400,6 +400,11 @@ Plan: 9 to add, 0 to change, 0 to destroy.
 
 ### ✅ Verification
 Both EC2 instances appeared in the AWS console — `terraweek-dev-web` and `terraweek-dev-api` — sharing the same security group, same subnet, launched from the exact same module source with only the `instance_name` input differing. No copy-paste required.
+<img width="1364" height="727" alt="image" src="https://github.com/user-attachments/assets/3c178464-9c7e-4e0e-88e2-ff9bb6d98179" />
+<img width="1356" height="711" alt="image" src="https://github.com/user-attachments/assets/54961ea5-0efc-44a2-be0a-d6c9c8b01148" />
+<img width="1366" height="290" alt="image" src="https://github.com/user-attachments/assets/fa62a40a-c23c-416f-8da3-32641d70f953" />
+<img width="1363" height="565" alt="image" src="https://github.com/user-attachments/assets/0c92cdc9-470b-4b18-badf-6c6594ed341a" />
+<img width="1357" height="575" alt="image" src="https://github.com/user-attachments/assets/89c652af-f2d0-4f17-9338-d29ad36f892f" />
 
 ---
 
