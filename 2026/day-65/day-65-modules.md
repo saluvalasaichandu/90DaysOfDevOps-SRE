@@ -541,6 +541,9 @@ Every resource is namespaced under `module.<name>.` — clean separation, easy t
 ```bash
 terraform destroy
 ```
+
+<img width="1019" height="375" alt="image" src="https://github.com/user-attachments/assets/8988efeb-d000-4b1e-a4d0-2d357edb69d4" />
+
 Terraform destroyed resources in reverse dependency order — EC2 instances first, then security group, then VPC components.
 
 ### 📝 Five Module Best Practices
@@ -572,18 +575,6 @@ Root module
          ▼
   Root outputs.tf → terraform output → used by CI/CD / other scripts
 ```
-
----
-
-## 📸 Screenshots
-- ✅ Project directory tree (`ls -R terraform-modules/`)
-- ✅ `terraform init` output showing local + registry modules linked
-- ✅ `terraform plan` showing resources under `module.web_server.*` and `module.api_server.*`
-- ✅ AWS console — two EC2 instances (`terraweek-dev-web`, `terraweek-dev-api`) running
-- ✅ `terraform state list` showing `module.` prefixes
-- ✅ `.terraform/modules/` directory contents
-
-*(Insert screenshots here)*
 
 ---
 
