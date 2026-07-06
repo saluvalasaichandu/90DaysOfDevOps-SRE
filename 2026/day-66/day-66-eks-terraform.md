@@ -375,6 +375,8 @@ Expected Output
 ```
 Welcome to nginx!
 ```
+<img width="1366" height="730" alt="image" src="https://github.com/user-attachments/assets/9e47da91-5265-44ef-8915-9fc1dd45ffb6" />
+
 
 ---
 
