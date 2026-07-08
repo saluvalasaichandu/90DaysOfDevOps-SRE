@@ -672,6 +672,10 @@ Deleted workspace "prod"!
 <img width="1366" height="730" alt="image" src="https://github.com/user-attachments/assets/3526d7b7-16e7-4be6-8b12-c280920fd2c3" />
 <img width="1022" height="466" alt="image" src="https://github.com/user-attachments/assets/f0031185-98d6-4106-abbc-86f6e96da6b1" />
 
+<img width="1366" height="728" alt="image" src="https://github.com/user-attachments/assets/352ae0f9-e4f8-41a9-a58f-5a7630c383e9" />
+<img width="1048" height="475" alt="image" src="https://github.com/user-attachments/assets/0a28cb8c-0906-4ac2-b8ba-01c8e8dc1746" />
+
+
 
 
 ✅ Verified in AWS console — all VPCs, EC2 instances, security groups, IGWs, route tables, and subnets removed. AWS account clean.
