@@ -41,6 +41,7 @@ terraform workspace select dev
 terraform workspace select staging
 terraform workspace select prod
 ```
+<img width="1366" height="514" alt="image" src="https://github.com/user-attachments/assets/4155e915-da1e-490e-bd49-64229397386f" />
 
 ### Q1: What does `terraform.workspace` return inside a config?
 It returns a **string** containing the name of the currently active workspace — e.g., `"dev"`, `"staging"`, or `"prod"`. This built-in variable can be used anywhere inside your `.tf` files to drive workspace-specific behavior:
