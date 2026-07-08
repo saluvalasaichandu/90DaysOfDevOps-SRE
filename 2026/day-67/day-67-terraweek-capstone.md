@@ -667,6 +667,8 @@ Deleted workspace "dev"!
 Deleted workspace "staging"!
 Deleted workspace "prod"!
 ```
+<img width="1366" height="728" alt="image" src="https://github.com/user-attachments/assets/356a82ea-4f18-4c28-bb63-5489c81af9a5" />
+
 
 ✅ Verified in AWS console — all VPCs, EC2 instances, security groups, IGWs, route tables, and subnets removed. AWS account clean.
 
