@@ -145,6 +145,7 @@ custom_message: "This is the primary web server"
       debug:
         msg: "{{ custom_message }}"
 ```
+<img width="1366" height="727" alt="image" src="https://github.com/user-attachments/assets/e61b6250-4b9b-433e-8ba6-7c21b50e3f53" />
 
 **Observed behavior:**
 | Host | `common_packages` | `app_env` | `http_port` | `max_connections` | `custom_message` |
