@@ -267,17 +267,9 @@ Handlers run **once**, at the end of the play, even if multiple tasks notify the
         mode: '0700'
 ```
 
+<img width="1365" height="707" alt="image" src="https://github.com/user-attachments/assets/1724c14b-9ddc-4098-a518-55153f0ed99c" />
+
 **Verification:** Nginx was installed only on `web` hosts, Node.js build tools only on `app` hosts, and MySQL client only on `db` hosts -- each play's tasks ran solely against its targeted group.
-
----
-
-## Screenshots
-
-> Add your terminal screenshots below.
-
-- [ ] Playbook run showing `changed` vs `ok` tasks
-- [ ] Second run proving idempotency (all tasks `ok`)
-- [ ] `--check --diff` output on `nginx-config.yml`
 
 ---
 
