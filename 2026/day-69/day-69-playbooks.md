@@ -143,6 +143,7 @@ A `files/app.conf` sample file was created for the `copy` task, and the playbook
 - **`command`** executes the binary directly without invoking a shell. It's safer and preferred by default because it avoids shell-injection risks, but it **cannot** use pipes (`|`), redirects (`>`), environment variable expansion, or chained commands (`&&`).
 - **`shell`** runs the command through `/bin/sh`, so it supports pipes, redirects, wildcards, and shell operators.
 - **Rule of thumb:** use `command` unless you specifically need shell features -- then use `shell`.
+<img width="1366" height="571" alt="image" src="https://github.com/user-attachments/assets/f0bdca86-17bb-4b15-b2ab-b22c4ca79c1f" />
 
 ---
 
