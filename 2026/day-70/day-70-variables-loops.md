@@ -275,40 +275,27 @@ ansible web-server -m setup -a "filter=ansible_default_ipv4"
 **`loops-demo.yml`**
 ```yaml
 ---
----
 - hosts: all
   become: yes
 
   vars:
 
-    packages:
-      - git
-      - curl
-      - wget
-
     users:
-      - devops
+      - deploy
       - monitor
+      - appuser
 
   tasks:
 
-  - name: Install Packages
-    apt:
-      name: "{{ item }}"
-      state: present
-      update_cache: yes
-    loop: "{{ packages }}"
-
-  - name: Create Users
-    user:
-      name: "{{ item }}"
-      state: present
-    loop: "{{ users }}"
-
-  - debug:
-      msg: "{{ item }}"
-    loop: "{{ users }}"
+    - name: Create Users
+      user:
+        name: "{{ item }}"
+        groups: sudo
+        append: yes
+        state: present
+      loop: "{{ users }}"
 ```
+<img width="1366" height="647" alt="image" src="https://github.com/user-attachments/assets/39b927ab-f404-49e3-9349-40126374e87f" />
 
 **Observed output:** each loop produced one result item per iteration (e.g., `item=deploy`, `item=monitor`, `item=appuser` shown as separate task results in the recap), confirming each list entry was processed individually rather than as a single bulk call.
 
