@@ -275,54 +275,39 @@ ansible web-server -m setup -a "filter=ansible_default_ipv4"
 **`loops-demo.yml`**
 ```yaml
 ---
-- name: Loops demo
-  hosts: all
-  become: true
+---
+- hosts: all
+  become: yes
 
   vars:
-    users:
-      - name: deploy
-        groups: wheel
-      - name: monitor
-        groups: wheel
-      - name: appuser
-        groups: users
 
-    directories:
-      - /opt/app/logs
-      - /opt/app/config
-      - /opt/app/data
-      - /opt/app/tmp
+    packages:
+      - git
+      - curl
+      - wget
+
+    users:
+      - devops
+      - monitor
 
   tasks:
-    - name: Create multiple users
-      user:
-        name: "{{ item.name }}"
-        groups: "{{ item.groups }}"
-        state: present
-      loop: "{{ users }}"
 
-    - name: Create multiple directories
-      file:
-        path: "{{ item }}"
-        state: directory
-        mode: '0755'
-      loop: "{{ directories }}"
+  - name: Install Packages
+    apt:
+      name: "{{ item }}"
+      state: present
+      update_cache: yes
+    loop: "{{ packages }}"
 
-    - name: Install multiple packages
-      yum:
-        name: "{{ item }}"
-        state: present
-      loop:
-        - git
-        - curl
-        - unzip
-        - jq
+  - name: Create Users
+    user:
+      name: "{{ item }}"
+      state: present
+    loop: "{{ users }}"
 
-    - name: Print each user created
-      debug:
-        msg: "Created user {{ item.name }} in group {{ item.groups }}"
-      loop: "{{ users }}"
+  - debug:
+      msg: "{{ item }}"
+    loop: "{{ users }}"
 ```
 
 **Observed output:** each loop produced one result item per iteration (e.g., `item=deploy`, `item=monitor`, `item=appuser` shown as separate task results in the recap), confirming each list entry was processed individually rather than as a single bulk call.
