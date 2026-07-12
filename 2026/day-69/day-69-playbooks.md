@@ -75,57 +75,65 @@ ansible-playbook install-nginx.yml
 Example tasks used for practice:
 
 ```yaml
-- name: Install multiple packages
-  yum:
-    name:
-      - git
-      - curl
-      - wget
-      - tree
-    state: present
+---
+- name: Install packages and perform system tasks
+  hosts: all
+  become: true
 
-- name: Ensure Nginx is running
-  service:
-    name: nginx
-    state: started
-    enabled: true
+  tasks:
 
-- name: Copy config file
-  copy:
-    src: files/app.conf
-    dest: /etc/app.conf
-    owner: root
-    group: root
-    mode: '0644'
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
 
-- name: Create application directory
-  file:
-    path: /opt/myapp
-    state: directory
-    owner: ec2-user
-    mode: '0755'
+    - name: Install multiple packages
+      apt:
+        name:
+          - nginx
+          - git
+          - curl
+          - wget
+          - tree
+        state: present
 
-- name: Check disk space
-  command: df -h
-  register: disk_output
+    - name: Ensure Nginx is running
+      service:
+        name: nginx
+        state: started
+        enabled: true
 
-- name: Print disk space
-  debug:
-    var: disk_output.stdout_lines
+    - name: Copy config file
+      copy:
+        src: files/app.conf
+        dest: /etc/app.conf
+        owner: root
+        group: root
+        mode: '0644'
 
-- name: Count running processes
-  shell: ps aux | wc -l
-  register: process_count
+    - name: Create application directory
+      file:
+        path: /opt/myapp
+        state: directory
+        owner: ubuntu
+        group: ubuntu
+        mode: '0755'
 
-- name: Show process count
-  debug:
-    msg: "Total processes: {{ process_count.stdout }}"
+    - name: Check disk space
+      command: df -h
+      register: disk_output
 
-- name: Set timezone in environment
-  lineinfile:
-    path: /etc/environment
-    line: 'TZ=Asia/Kolkata'
-    create: true
+    - name: Print disk space
+      debug:
+        var: disk_output.stdout_lines
+
+    - name: Count running processes
+      shell: ps aux | wc -l
+      register: process_count
+
+    - name: Show process count
+      debug:
+        msg: "Total processes: {{ process_count.stdout }}"
 ```
 
 A `files/app.conf` sample file was created for the `copy` task, and the playbook was run against all inventory hosts.
