@@ -285,15 +285,17 @@ ansible -i inventory.ini web -m apt -a "name=git state=present" --become
 ```bash
 echo "Hello from Ansible" > hello.txt
 
-ansible all -m copy -a "src=hello.txt dest=/tmp/hello.txt"
+ansible -i inventory.ini all -m copy -a "src=hello.txt dest=/tmp/hello.txt"
+
 ```
+<img width="1051" height="718" alt="image" src="https://github.com/user-attachments/assets/874672a2-f30a-40f6-9761-102b8a57629d" />
 
 ---
 
 ## Verify File
 
 ```bash
-ansible all -m command -a "cat /tmp/hello.txt"
+ansible -i inventory.ini all -m command -a "cat /tmp/hello.txt"
 ```
 
 Output
@@ -301,6 +303,7 @@ Output
 ```
 Hello from Ansible
 ```
+<img width="1098" height="226" alt="image" src="https://github.com/user-attachments/assets/b006fcb6-3691-46ec-a3a9-689ced562487" />
 
 ---
 
