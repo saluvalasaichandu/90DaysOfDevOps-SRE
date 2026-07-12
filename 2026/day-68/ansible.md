@@ -273,8 +273,10 @@ ansible web -m yum -a "name=git state=present" --become
 Ubuntu
 
 ```bash
-ansible web -m apt -a "name=git state=present" --become
+ansible -i inventory.ini web -m apt -a "name=git state=present" --become
 ```
+<img width="1028" height="171" alt="image" src="https://github.com/user-attachments/assets/b9aaad8a-59fb-43f1-8fa1-4a73b0fb45c1" />
+<img width="572" height="122" alt="image" src="https://github.com/user-attachments/assets/b1ede767-0d0a-4040-bcfb-97f11e54a619" />
 
 ---
 
