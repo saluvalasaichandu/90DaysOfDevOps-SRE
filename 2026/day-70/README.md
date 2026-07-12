@@ -146,6 +146,7 @@ Write a playbook `site.yml` that uses these variables:
 Run it and observe which variables apply to which hosts.
 
 **Document:** What is the variable precedence? (hint: host_vars > group_vars > playbook vars, and `-e` overrides everything)
+<img width="1366" height="727" alt="image" src="https://github.com/user-attachments/assets/571d91a4-70f4-4dbc-a36b-34935764ed45" />
 
 ---
 
