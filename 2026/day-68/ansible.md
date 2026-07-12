@@ -241,13 +241,14 @@ Troubleshooting
 ```bash
 ansible all -m command -a "uptime"
 ```
+<img width="1366" height="729" alt="image" src="https://github.com/user-attachments/assets/eb6d081f-3ea4-462c-b6cb-d0dd5c539023" />
 
 ---
 
 ## Check Memory
 
 ```bash
-ansible web -m command -a "free -h"
+ansible -i inventory.ini web -m command -a "free -h"
 ```
 
 ---
@@ -255,8 +256,9 @@ ansible web -m command -a "free -h"
 ## Check Disk
 
 ```bash
-ansible all -m command -a "df -h"
+ansible -i inventory.ini all -m command -a "df -h"
 ```
+<img width="1365" height="725" alt="image" src="https://github.com/user-attachments/assets/68447965-9f84-49c4-bbbf-bbf0345f1ec0" />
 
 ---
 
