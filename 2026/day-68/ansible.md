@@ -419,6 +419,7 @@ Shell
 ```bash
 ansible all -m shell -a "cat /etc/passwd | grep root"
 ```
+<img width="1186" height="212" alt="image" src="https://github.com/user-attachments/assets/fd86bd3e-6a63-4450-aa45-68b74991ba5e" />
 
 ---
 
