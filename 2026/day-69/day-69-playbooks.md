@@ -45,6 +45,7 @@ ansible-playbook install-nginx.yml
 **Verification:** curled the web server's public IP and confirmed the custom index page was served.
 <img width="1366" height="709" alt="image" src="https://github.com/user-attachments/assets/05a88cdf-f9fc-4aa0-80be-446aa2bd7897" />
 
+<img width="1345" height="221" alt="image" src="https://github.com/user-attachments/assets/7a2e52e5-4bf3-4cdf-85a2-1ad6b8d4b593" />
 
 ---
 
