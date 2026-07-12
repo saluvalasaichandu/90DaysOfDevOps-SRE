@@ -314,49 +314,42 @@ ansible web-server -m setup -a "filter=ansible_default_ipv4"
 **`server-report.yml`**
 ```yaml
 ---
-- name: Server Health Report
+- name: Server Report
   hosts: all
+  become: yes
 
   tasks:
-    - name: Check disk space
-      command: df -h /
-      register: disk_result
 
-    - name: Check memory
+    - name: Get Disk Usage
+      command: df -h
+      register: disk
+
+    - name: Get Memory Usage
       command: free -m
-      register: memory_result
+      register: memory
 
-    - name: Check running services
-      shell: systemctl list-units --type=service --state=running | head -20
-      register: services_result
-
-    - name: Generate report
+    - name: Display Server Information
       debug:
         msg:
-          - "========== {{ inventory_hostname }} =========="
-          - "OS: {{ ansible_distribution }} {{ ansible_distribution_version }}"
-          - "IP: {{ ansible_default_ipv4.address }}"
-          - "RAM: {{ ansible_memtotal_mb }}MB"
-          - "Disk: {{ disk_result.stdout_lines[1] }}"
-          - "Running services (first 20): {{ services_result.stdout_lines | length }}"
+          - "Server Name : {{ inventory_hostname }}"
+          - "Operating System : {{ ansible_distribution }}"
+          - "IP Address : {{ ansible_default_ipv4.address }}"
+          - "Total RAM : {{ ansible_memtotal_mb }} MB"
+          - "Disk Info : {{ disk.stdout_lines[1] }}"
 
-    - name: Flag if disk is critically low
-      debug:
-        msg: "ALERT: Check disk space on {{ inventory_hostname }}"
-      when: "'9[0-9]%' in disk_result.stdout or '100%' in disk_result.stdout"
-
-    - name: Save report to file
+    - name: Create Report File
       copy:
+        dest: /tmp/server-report.txt
         content: |
-          Server: {{ inventory_hostname }}
-          OS: {{ ansible_distribution }} {{ ansible_distribution_version }}
-          IP: {{ ansible_default_ipv4.address }}
-          RAM: {{ ansible_memtotal_mb }}MB
-          Disk: {{ disk_result.stdout }}
-          Checked at: {{ ansible_date_time.iso8601 }}
-        dest: "/tmp/server-report-{{ inventory_hostname }}.txt"
-      become: true
+          Server Name : {{ inventory_hostname }}
+          Operating System : {{ ansible_distribution }}
+          IP Address : {{ ansible_default_ipv4.address }}
+          Total RAM : {{ ansible_memtotal_mb }} MB
+          Disk Usage :
+          {{ disk.stdout }}
 ```
+<img width="1361" height="707" alt="image" src="https://github.com/user-attachments/assets/414f2d07-c4d5-450e-83a9-8e19906a0ce7" />
+<img width="1366" height="717" alt="image" src="https://github.com/user-attachments/assets/c2d884ec-4c7e-4784-a55d-cb8151d68ff9" />
 
 **Sample report — `/tmp/server-report-web-server.txt`**
 ```
