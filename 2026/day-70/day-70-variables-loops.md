@@ -203,19 +203,24 @@ ansible web-server -m setup -a "filter=ansible_default_ipv4"
 **`conditional-demo.yml`**
 ```yaml
 ---
-- name: Conditional tasks demo
+---
+- name: Conditional tasks demo (Ubuntu)
   hosts: all
   become: true
 
   tasks:
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+
     - name: Install Nginx (only on web servers)
-      yum:
+      apt:
         name: nginx
         state: present
       when: "'web' in group_names"
 
-    - name: Install MySQL (only on db servers)
-      yum:
+    - name: Install MySQL Server (only on db servers)
+      apt:
         name: mysql-server
         state: present
       when: "'db' in group_names"
@@ -224,11 +229,6 @@ ansible web-server -m setup -a "filter=ansible_default_ipv4"
       debug:
         msg: "WARNING: This host has less than 1GB RAM"
       when: ansible_memtotal_mb < 1024
-
-    - name: Run only on Amazon Linux
-      debug:
-        msg: "This is an Amazon Linux machine"
-      when: ansible_distribution == "Amazon"
 
     - name: Run only on Ubuntu
       debug:
@@ -252,6 +252,7 @@ ansible web-server -m setup -a "filter=ansible_default_ipv4"
         msg: "Either web or app server"
       when: "'web' in group_names or 'app' in group_names"
 ```
+<img width="1366" height="533" alt="image" src="https://github.com/user-attachments/assets/ddf4eb04-8450-4846-8449-de3ecd546d04" />
 
 **Verification — task execution per host:**
 | Task | web-server | db-server |
