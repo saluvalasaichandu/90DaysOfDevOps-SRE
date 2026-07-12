@@ -230,6 +230,7 @@ Troubleshooting
 - Verify ansible_user
 - Verify Public IP
 - Check SSH Connection
+<img width="765" height="548" alt="image" src="https://github.com/user-attachments/assets/608ad700-d8ec-44f8-8060-2002d17977e8" />
 
 ---
 
