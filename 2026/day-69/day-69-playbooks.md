@@ -38,10 +38,13 @@ Today's focus was moving from ad-hoc Ansible commands to real automation using *
 ```bash
 ansible-playbook install-nginx.yml
 ```
+<img width="1366" height="623" alt="image" src="https://github.com/user-attachments/assets/c3d8bcff-742a-44d7-8cb7-76f0819f4412" />
 
 **Verify idempotency:** running it a second time shows every task as `ok` instead of `changed`, because Ansible checks current state before acting and only makes changes when needed.
 
 **Verification:** curled the web server's public IP and confirmed the custom index page was served.
+<img width="1366" height="709" alt="image" src="https://github.com/user-attachments/assets/05a88cdf-f9fc-4aa0-80be-446aa2bd7897" />
+
 
 ---
 
