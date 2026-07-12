@@ -60,6 +60,7 @@ Override from the CLI:
 ```bash
 ansible-playbook variables-demo.yml -e "app_name=my-custom-app app_port=9090"
 ```
+<img width="1364" height="726" alt="image" src="https://github.com/user-attachments/assets/2c3b1522-db57-4662-9085-6aa0df101e65" />
 
 **Verification:** ✅ The `-e` extra-var flag overrode the in-playbook `vars:` values — `app_name` and `app_port` resolved to `my-custom-app` and `9090` in the debug output instead of the defaults. This confirms `-e` sits at the top of the precedence chain.
 
