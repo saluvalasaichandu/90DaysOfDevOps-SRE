@@ -193,18 +193,18 @@ ansible-practice/
 Create Inventory
 
 ```ini
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3.14
+
 [web]
-web-server ansible_host=3.10.xx.xx
+ubuntu@34.204.49.70
 
 [app]
-app-server ansible_host=13.22.xx.xx
+ubuntu@54.221.180.49
 
 [db]
-db-server ansible_host=54.92.xx.xx
+ubuntu@34.227.49.194
 
-[all:vars]
-ansible_user=ec2-user
-ansible_ssh_private_key_file=~/key.pem
 ```
 
 Verify Connectivity
