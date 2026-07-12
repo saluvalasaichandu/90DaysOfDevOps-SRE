@@ -171,6 +171,7 @@ Only on the **Control Node**.
 
 Because Ansible connects remotely using SSH. Managed nodes do not require any agent.
 <img width="1366" height="276" alt="image" src="https://github.com/user-attachments/assets/f7276908-373a-49f2-a1b1-159c0154c721" />
+<img width="1042" height="478" alt="image" src="https://github.com/user-attachments/assets/985075dd-dadc-406d-88ad-2f1ecbe428b2" />
 
 ---
 
