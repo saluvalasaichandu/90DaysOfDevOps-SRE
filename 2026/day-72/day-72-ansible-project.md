@@ -448,23 +448,6 @@ Verify
 ```bash
 docker ps
 ```
-
----
-
-# 📸 Screenshots
-
-- EC2 Instances
-- ansible --version
-- ansible all -m ping
-- Project Structure
-- ansible-playbook site.yml
-- docker ps
-- curl localhost:8080
-- Browser Output
-- Second Playbook Execution
-- Vault Encryption
-- Nginx Reverse Proxy
-
 ---
 
 # 📚 Key Concepts Covered
