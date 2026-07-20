@@ -1,7 +1,9 @@
 provider "aws" {
   region = var.region
 }
-
+resource "aws_s3_bucket" "imported" {
+  bucket = "terraweek-import-test-saichandu"
+}
 data "aws_ami" "amazon_linux" {
 
   most_recent = true
